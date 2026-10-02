@@ -1,0 +1,71 @@
+﻿direction,product_group,vsic,sector_vi,role_da2,hs_chapters_draft,confidence,note
+export,Hàng thủy sản,10,Chế biến thực phẩm,output,03; 16,medium,Phần lớn chế biến; một phần là thủy sản tươi sống (nông nghiệp)
+export,Hàng rau quả,10,Chế biến thực phẩm,output,07–08; 20,low,Lẫn hàng tươi và chế biến
+export,Hạt điều,10,Chế biến thực phẩm,output,0801,medium,
+export,Cà phê,10,Chế biến thực phẩm,excluded,0901; 2101,medium,Giá hàng hóa quốc tế chi phối; loại theo quy tắc loại trừ hàng nguyên liệu
+export,Hạt tiêu,10,Chế biến thực phẩm,excluded,0904,medium,Giá hàng hóa quốc tế chi phối
+export,Bánh kẹo và các sản phẩm từ ngũ cốc,10,Chế biến thực phẩm,output,19,high,
+export,Thức ăn gia súc và nguyên liệu,10,Chế biến thực phẩm,output,23,medium,
+export,Hóa chất,20,Hóa chất,output,28–29; 38,medium,
+export,Sản phẩm hóa chất,20,Hóa chất,output,30–38,low,Nhóm rộng
+export,Chất dẻo nguyên liệu,20,Hóa chất,output,39 (01–14),medium,Nhựa nguyên sinh thuộc VSIC 2013
+export,Sản phẩm từ chất dẻo,22,Cao su và plastic,output,39 (15–26),high,
+export,Cao su,22,Cao su và plastic,excluded,4001–4006,medium,Cao su thiên nhiên: giá hàng hóa chi phối
+export,Sản phẩm từ cao su,22,Cao su và plastic,output,40 (07–17),high,
+export,"Túi xách, ví,vali, mũ, ô, dù",15,Da và sản phẩm da,output,42; 65–66,medium,"Mũ, ô dù không thuộc VSIC 15"
+export,"Sản phẩm mây, tre, cói và thảm",16,Gỗ và sản phẩm gỗ,output,46; 57,medium,Thảm thuộc VSIC 13
+export,Gỗ và sản phẩm gỗ,16,Gỗ và sản phẩm gỗ,output,44; 9403 (gỗ),medium,Đồ nội thất gỗ thuộc VSIC 31; xem tiểu mục «Sản phẩm gỗ»
+export,Giấy và các sản phẩm từ giấy,17,Giấy,output,48,high,
+export,"Xơ, sợi dệt các loại",13,Dệt,output,"50–55 (xơ, sợi)",medium,
+export,"Hàng dệt, may",13–14,Dệt và may mặc,output,61–63,high,
+export,"Vải mành, vải kỹ thuật khác",13,Dệt,output,59,high,
+export,Giày dép các loại,15,Da và giày dép,output,64,high,
+export,"Nguyên phụ liệu dệt, may, da, giày",13–15,"Dệt, may, da giày",output,nhiều chương,low,Đầu vào được xuất khẩu lại
+export,"Sản phẩm gốm, sứ",23,Khoáng phi kim,output,69,high,
+export,Thủy tinh và các sản phẩm từ thủy tinh,23,Khoáng phi kim,output,70,high,
+export,"Đá quý, kim loại quý và sản phẩm",32,Chế biến khác,output,71,medium,
+export,Sắt thép các loại,24,Kim loại cơ bản,output,72,high,
+export,Sản phẩm từ sắt thép,25,Sản phẩm kim loại,output,73,high,
+export,Kim loại thường khác,24,Kim loại cơ bản,output,74–81,high,
+export,"Máy vi tính, sản phẩm điện tử và linh kiện",26,"Điện tử, máy tính",output,8471; 8473; 8542; 85 (một phần),medium,Nhóm lớn nhất; ranh giới với điện thoại cần đối chiếu mã HS
+export,Điện thoại các loại và linh kiện,26,"Điện tử, máy tính",output,8517,high,
+export,"Máy ảnh, máy quay phim và linh kiện",26,"Điện tử, máy tính",output,8525; 9006–9007,high,
+export,"Máy móc, thiết bị, dụng cụ phụ tùng khác",28,Máy móc thiết bị,output,"84 (trừ 8471, 8473); 85 (một phần); 90",low,"Nhóm rộng, trải qua VSIC 27–28"
+export,Dây điện và dây cáp điện,27,Thiết bị điện,output,8544,high,
+export,Phương tiện vận tải và phụ tùng,29–30,Phương tiện vận tải,output,86–89,high,"Xem tiểu mục tàu thuyền, phụ tùng ô tô"
+export,Sản phẩm nội thất từ chất liệu khác gỗ,31,Nội thất,output,9401–9403 (không gỗ),medium,
+export,Hàng hóa khác,,,excluded,,,"Nhóm còn lại, không gán được ngành"
+import,Lúa mì,10,Chế biến thực phẩm,input,1001,high,
+import,Ngô,10,Chế biến thực phẩm,input,1005,high,Chủ yếu cho thức ăn chăn nuôi
+import,Dầu mỡ động thực vật,10,Chế biến thực phẩm,input,15,high,
+import,Thức ăn gia súc và nguyên liệu,10,Chế biến thực phẩm,input,23,high,
+import,Quặng và khoáng sản khác,,Khai khoáng,excluded,25–26,medium,Loại theo quy tắc khai khoáng
+import,Than các loại,,Khai khoáng,excluded,27 (01–04),high,
+import,Dầu thô,,Khai khoáng,excluded,2709,high,
+import,Sản phẩm khác từ dầu mỏ,19,Lọc hóa dầu,excluded,27 (10–15),medium,Năng lượng
+import,Hóa chất,20; 22,Hóa chất; cao su và plastic,input,28–29; 38,medium,
+import,Sản phẩm hóa chất,20,Hóa chất,input,30–38,low,
+import,Chất dẻo nguyên liệu,22,Cao su và plastic,input,39 (01–14),high,Đầu vào chính của VSIC 22
+import,Sản phẩm từ chất dẻo,22; 26,Cao su và plastic; điện tử,input,39 (15–26),low,Nhiều ngành sử dụng
+import,Cao su,22,Cao su và plastic,input,40 (01–06),high,
+import,Gỗ và sản phẩm gỗ,16; 31,Gỗ; nội thất,input,44,high,
+import,Giấy các loại,17,Giấy,input,48,high,
+import,Sản phẩm từ giấy,17,Giấy,input,48,medium,
+import,Bông các loại,13–14,Dệt và may mặc,input,5201–5203,high,
+import,"Xơ, sợi dệt các loại",13–14,Dệt và may mặc,input,"50–55 (xơ, sợi)",high,
+import,Vải các loại,13–14,Dệt và may mặc,input,50–60 (vải),high,
+import,"Nguyên phụ liệu dệt, may, da, giày",13–15,"Dệt, may, da giày",input,nhiều chương,medium,
+import,Sắt thép các loại,24–25,Kim loại,input,72,high,STT 18 trong biểu 8/2026 bị đánh trùng
+import,Sản phẩm từ sắt thép,25; 28,Sản phẩm kim loại; máy móc,input,73,medium,
+import,Kim loại thường khác,24–27,Kim loại; thiết bị điện,input,74–81,medium,Đồng chủ yếu cho dây cáp điện (VSIC 27)
+import,Sản phẩm từ kim loại thường khác,25,Sản phẩm kim loại,input,82–83,medium,
+import,"Máy vi tính, sản phẩm điện tử và linh kiện",26,"Điện tử, máy tính",input,8471; 8473; 8542; 85 (một phần),high,Đầu vào lắp ráp chính của VSIC 26
+import,Hàng điện gia dụng và linh kiện,27,Thiết bị điện,input,8509; 8516,medium,
+import,Điện thoại các loại và linh kiện,26,"Điện tử, máy tính",input,8517,high,
+import,"Máy ảnh, máy quay phim và linh kiện",26,"Điện tử, máy tính",input,8525; 9006–9007,high,
+import,"Máy móc, thiết bị, dụng cụ, phụ tùng khác",,Đầu tư (máy móc),excluded,84–85; 90,medium,"Chủ yếu là hàng tư liệu sản xuất, không phải đầu vào trung gian; báo cáo riêng"
+import,Dây điện và dây cáp điện,27,Thiết bị điện,input,8544,high,
+import,Ô tô nguyên chiếc các loại,,Tiêu dùng / đầu tư,excluded,8702–8704,high,Hàng thành phẩm
+import,"Linh kiện, phụ tùng ô tô",29,Ô tô,input,8708,high,
+import,Phương tiện vận tải khác và phụ tùng,30,Phương tiện vận tải khác,input,86; 88–89,medium,
+import,Hàng hóa khác,,,excluded,,,Nhóm còn lại

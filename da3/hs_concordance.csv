@@ -1,0 +1,843 @@
+﻿export_group,hs,level,da3_rule
+Hàng thủy sản,0301,HS4,include
+Hàng thủy sản,0302,HS4,include
+Hàng thủy sản,0303,HS4,include
+Hàng thủy sản,0304,HS4,include
+Hàng thủy sản,0305,HS4,include
+Hàng thủy sản,0306,HS4,include
+Hàng thủy sản,0307,HS4,include
+Hàng thủy sản,0308,HS4,include
+Hàng thủy sản,1603,HS4,include
+Hàng thủy sản,1604,HS4,include
+Hàng thủy sản,1605,HS4,include
+Hàng rau quả,0701,HS4,include
+Hàng rau quả,0702,HS4,include
+Hàng rau quả,0703,HS4,include
+Hàng rau quả,0704,HS4,include
+Hàng rau quả,0705,HS4,include
+Hàng rau quả,0706,HS4,include
+Hàng rau quả,0707,HS4,include
+Hàng rau quả,0708,HS4,include
+Hàng rau quả,0709,HS4,include
+Hàng rau quả,0710,HS4,include
+Hàng rau quả,0711,HS4,include
+Hàng rau quả,0712,HS4,include
+Hàng rau quả,0713,HS4,include
+Hàng rau quả,0714,HS4,include
+Hàng rau quả,0802,HS4,include
+Hàng rau quả,0803,HS4,include
+Hàng rau quả,0804,HS4,include
+Hàng rau quả,0805,HS4,include
+Hàng rau quả,0806,HS4,include
+Hàng rau quả,0807,HS4,include
+Hàng rau quả,0808,HS4,include
+Hàng rau quả,0809,HS4,include
+Hàng rau quả,0810,HS4,include
+Hàng rau quả,0811,HS4,include
+Hàng rau quả,0812,HS4,include
+Hàng rau quả,0813,HS4,include
+Hàng rau quả,0814,HS4,include
+Hàng rau quả,2001,HS4,include
+Hàng rau quả,2002,HS4,include
+Hàng rau quả,2003,HS4,include
+Hàng rau quả,2004,HS4,include
+Hàng rau quả,2005,HS4,include
+Hàng rau quả,2006,HS4,include
+Hàng rau quả,2007,HS4,include
+Hàng rau quả,2008,HS4,include
+Hàng rau quả,2009,HS4,include
+Cà phê,0901,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Cà phê,2101,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Hạt tiêu,0904,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Bánh kẹo và các sản phẩm từ ngũ cốc,1704,HS4,include
+Bánh kẹo và các sản phẩm từ ngũ cốc,1806,HS4,include
+Bánh kẹo và các sản phẩm từ ngũ cốc,1901,HS4,include
+Bánh kẹo và các sản phẩm từ ngũ cốc,1902,HS4,include
+Bánh kẹo và các sản phẩm từ ngũ cốc,1903,HS4,include
+Bánh kẹo và các sản phẩm từ ngũ cốc,1904,HS4,include
+Bánh kẹo và các sản phẩm từ ngũ cốc,1905,HS4,include
+Hóa chất,2801,HS4,include
+Hóa chất,2802,HS4,include
+Hóa chất,2803,HS4,include
+Hóa chất,2804,HS4,include
+Hóa chất,2805,HS4,include
+Hóa chất,2806,HS4,include
+Hóa chất,2807,HS4,include
+Hóa chất,2808,HS4,include
+Hóa chất,2809,HS4,include
+Hóa chất,2810,HS4,include
+Hóa chất,2811,HS4,include
+Hóa chất,2812,HS4,include
+Hóa chất,2813,HS4,include
+Hóa chất,2814,HS4,include
+Hóa chất,2815,HS4,include
+Hóa chất,2816,HS4,include
+Hóa chất,2817,HS4,include
+Hóa chất,2818,HS4,include
+Hóa chất,2819,HS4,include
+Hóa chất,2820,HS4,include
+Hóa chất,2821,HS4,include
+Hóa chất,2822,HS4,include
+Hóa chất,2823,HS4,include
+Hóa chất,2824,HS4,include
+Hóa chất,2825,HS4,include
+Hóa chất,2826,HS4,include
+Hóa chất,2827,HS4,include
+Hóa chất,2828,HS4,include
+Hóa chất,2829,HS4,include
+Hóa chất,2830,HS4,include
+Hóa chất,2831,HS4,include
+Hóa chất,2832,HS4,include
+Hóa chất,2833,HS4,include
+Hóa chất,2834,HS4,include
+Hóa chất,2835,HS4,include
+Hóa chất,2836,HS4,include
+Hóa chất,2837,HS4,include
+Hóa chất,2838,HS4,include
+Hóa chất,2839,HS4,include
+Hóa chất,2840,HS4,include
+Hóa chất,2841,HS4,include
+Hóa chất,2842,HS4,include
+Hóa chất,2843,HS4,include
+Hóa chất,2844,HS4,include
+Hóa chất,2845,HS4,include
+Hóa chất,2846,HS4,include
+Hóa chất,2847,HS4,include
+Hóa chất,2848,HS4,include
+Hóa chất,2849,HS4,include
+Hóa chất,2850,HS4,include
+Hóa chất,2851,HS4,include
+Hóa chất,2852,HS4,include
+Hóa chất,2853,HS4,include
+Hóa chất,2901,HS4,include
+Hóa chất,2902,HS4,include
+Hóa chất,2903,HS4,include
+Hóa chất,2904,HS4,include
+Hóa chất,2905,HS4,include
+Hóa chất,2906,HS4,include
+Hóa chất,2907,HS4,include
+Hóa chất,2908,HS4,include
+Hóa chất,2909,HS4,include
+Hóa chất,2910,HS4,include
+Hóa chất,2911,HS4,include
+Hóa chất,2912,HS4,include
+Hóa chất,2913,HS4,include
+Hóa chất,2914,HS4,include
+Hóa chất,2915,HS4,include
+Hóa chất,2916,HS4,include
+Hóa chất,2917,HS4,include
+Hóa chất,2918,HS4,include
+Hóa chất,2919,HS4,include
+Hóa chất,2920,HS4,include
+Hóa chất,2921,HS4,include
+Hóa chất,2922,HS4,include
+Hóa chất,2923,HS4,include
+Hóa chất,2924,HS4,include
+Hóa chất,2925,HS4,include
+Hóa chất,2926,HS4,include
+Hóa chất,2927,HS4,include
+Hóa chất,2928,HS4,include
+Hóa chất,2929,HS4,include
+Hóa chất,2930,HS4,include
+Hóa chất,2931,HS4,include
+Hóa chất,2932,HS4,include
+Hóa chất,2933,HS4,include
+Hóa chất,2934,HS4,include
+Hóa chất,2935,HS4,include
+Hóa chất,2936,HS4,include
+Hóa chất,2937,HS4,include
+Hóa chất,2938,HS4,include
+Hóa chất,2939,HS4,include
+Hóa chất,2940,HS4,include
+Hóa chất,2941,HS4,include
+Hóa chất,2942,HS4,include
+Sản phẩm hóa chất,3001,HS4,include
+Sản phẩm hóa chất,3002,HS4,include
+Sản phẩm hóa chất,3003,HS4,include
+Sản phẩm hóa chất,3004,HS4,include
+Sản phẩm hóa chất,3005,HS4,include
+Sản phẩm hóa chất,3006,HS4,include
+Sản phẩm hóa chất,3101,HS4,include
+Sản phẩm hóa chất,3102,HS4,include
+Sản phẩm hóa chất,3103,HS4,include
+Sản phẩm hóa chất,3104,HS4,include
+Sản phẩm hóa chất,3105,HS4,include
+Sản phẩm hóa chất,3201,HS4,include
+Sản phẩm hóa chất,3202,HS4,include
+Sản phẩm hóa chất,3203,HS4,include
+Sản phẩm hóa chất,3204,HS4,include
+Sản phẩm hóa chất,3205,HS4,include
+Sản phẩm hóa chất,3206,HS4,include
+Sản phẩm hóa chất,3207,HS4,include
+Sản phẩm hóa chất,3208,HS4,include
+Sản phẩm hóa chất,3209,HS4,include
+Sản phẩm hóa chất,3210,HS4,include
+Sản phẩm hóa chất,3211,HS4,include
+Sản phẩm hóa chất,3212,HS4,include
+Sản phẩm hóa chất,3213,HS4,include
+Sản phẩm hóa chất,3214,HS4,include
+Sản phẩm hóa chất,3215,HS4,include
+Sản phẩm hóa chất,3301,HS4,include
+Sản phẩm hóa chất,3302,HS4,include
+Sản phẩm hóa chất,3303,HS4,include
+Sản phẩm hóa chất,3304,HS4,include
+Sản phẩm hóa chất,3305,HS4,include
+Sản phẩm hóa chất,3306,HS4,include
+Sản phẩm hóa chất,3307,HS4,include
+Sản phẩm hóa chất,3401,HS4,include
+Sản phẩm hóa chất,3402,HS4,include
+Sản phẩm hóa chất,3403,HS4,include
+Sản phẩm hóa chất,3404,HS4,include
+Sản phẩm hóa chất,3405,HS4,include
+Sản phẩm hóa chất,3406,HS4,include
+Sản phẩm hóa chất,3407,HS4,include
+Sản phẩm hóa chất,3501,HS4,include
+Sản phẩm hóa chất,3502,HS4,include
+Sản phẩm hóa chất,3503,HS4,include
+Sản phẩm hóa chất,3504,HS4,include
+Sản phẩm hóa chất,3505,HS4,include
+Sản phẩm hóa chất,3506,HS4,include
+Sản phẩm hóa chất,3507,HS4,include
+Sản phẩm hóa chất,3601,HS4,include
+Sản phẩm hóa chất,3602,HS4,include
+Sản phẩm hóa chất,3603,HS4,include
+Sản phẩm hóa chất,3604,HS4,include
+Sản phẩm hóa chất,3605,HS4,include
+Sản phẩm hóa chất,3606,HS4,include
+Sản phẩm hóa chất,3701,HS4,include
+Sản phẩm hóa chất,3702,HS4,include
+Sản phẩm hóa chất,3703,HS4,include
+Sản phẩm hóa chất,3704,HS4,include
+Sản phẩm hóa chất,3705,HS4,include
+Sản phẩm hóa chất,3706,HS4,include
+Sản phẩm hóa chất,3707,HS4,include
+Sản phẩm hóa chất,3801,HS4,include
+Sản phẩm hóa chất,3802,HS4,include
+Sản phẩm hóa chất,3803,HS4,include
+Sản phẩm hóa chất,3804,HS4,include
+Sản phẩm hóa chất,3805,HS4,include
+Sản phẩm hóa chất,3806,HS4,include
+Sản phẩm hóa chất,3807,HS4,include
+Sản phẩm hóa chất,3808,HS4,include
+Sản phẩm hóa chất,3809,HS4,include
+Sản phẩm hóa chất,3810,HS4,include
+Sản phẩm hóa chất,3811,HS4,include
+Sản phẩm hóa chất,3812,HS4,include
+Sản phẩm hóa chất,3813,HS4,include
+Sản phẩm hóa chất,3814,HS4,include
+Sản phẩm hóa chất,3815,HS4,include
+Sản phẩm hóa chất,3816,HS4,include
+Sản phẩm hóa chất,3817,HS4,include
+Sản phẩm hóa chất,3818,HS4,include
+Sản phẩm hóa chất,3819,HS4,include
+Sản phẩm hóa chất,3820,HS4,include
+Sản phẩm hóa chất,3821,HS4,include
+Sản phẩm hóa chất,3822,HS4,include
+Sản phẩm hóa chất,3823,HS4,include
+Sản phẩm hóa chất,3824,HS4,include
+Sản phẩm hóa chất,3825,HS4,include
+Sản phẩm hóa chất,3826,HS4,include
+Chất dẻo nguyên liệu,3901,HS4,include
+Chất dẻo nguyên liệu,3902,HS4,include
+Chất dẻo nguyên liệu,3903,HS4,include
+Chất dẻo nguyên liệu,3904,HS4,include
+Chất dẻo nguyên liệu,3905,HS4,include
+Chất dẻo nguyên liệu,3906,HS4,include
+Chất dẻo nguyên liệu,3907,HS4,include
+Chất dẻo nguyên liệu,3908,HS4,include
+Chất dẻo nguyên liệu,3909,HS4,include
+Chất dẻo nguyên liệu,3910,HS4,include
+Chất dẻo nguyên liệu,3911,HS4,include
+Chất dẻo nguyên liệu,3912,HS4,include
+Chất dẻo nguyên liệu,3913,HS4,include
+Chất dẻo nguyên liệu,3914,HS4,include
+Sản phẩm từ chất dẻo,3915,HS4,include
+Sản phẩm từ chất dẻo,3916,HS4,include
+Sản phẩm từ chất dẻo,3917,HS4,include
+Sản phẩm từ chất dẻo,3918,HS4,include
+Sản phẩm từ chất dẻo,3919,HS4,include
+Sản phẩm từ chất dẻo,3920,HS4,include
+Sản phẩm từ chất dẻo,3921,HS4,include
+Sản phẩm từ chất dẻo,3922,HS4,include
+Sản phẩm từ chất dẻo,3923,HS4,include
+Sản phẩm từ chất dẻo,3924,HS4,include
+Sản phẩm từ chất dẻo,3925,HS4,include
+Sản phẩm từ chất dẻo,3926,HS4,include
+Cao su,4001,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Cao su,4002,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Cao su,4003,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Cao su,4004,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Cao su,4005,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Cao su,4006,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Sản phẩm từ cao su,4007,HS4,include
+Sản phẩm từ cao su,4008,HS4,include
+Sản phẩm từ cao su,4009,HS4,include
+Sản phẩm từ cao su,4010,HS4,include
+Sản phẩm từ cao su,4011,HS4,include
+Sản phẩm từ cao su,4012,HS4,include
+Sản phẩm từ cao su,4013,HS4,include
+Sản phẩm từ cao su,4014,HS4,include
+Sản phẩm từ cao su,4015,HS4,include
+Sản phẩm từ cao su,4016,HS4,include
+Sản phẩm từ cao su,4017,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",4202,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6501,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6502,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6503,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6504,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6505,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6506,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6507,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6601,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6602,HS4,include
+"Túi xách, ví,vali, mũ, ô, dù",6603,HS4,include
+Gỗ và sản phẩm gỗ,4401,HS4,include
+Gỗ và sản phẩm gỗ,4402,HS4,include
+Gỗ và sản phẩm gỗ,4403,HS4,include
+Gỗ và sản phẩm gỗ,4404,HS4,include
+Gỗ và sản phẩm gỗ,4405,HS4,include
+Gỗ và sản phẩm gỗ,4406,HS4,include
+Gỗ và sản phẩm gỗ,4407,HS4,include
+Gỗ và sản phẩm gỗ,4408,HS4,include
+Gỗ và sản phẩm gỗ,4409,HS4,include
+Gỗ và sản phẩm gỗ,4410,HS4,include
+Gỗ và sản phẩm gỗ,4411,HS4,include
+Gỗ và sản phẩm gỗ,4412,HS4,include
+Gỗ và sản phẩm gỗ,4413,HS4,include
+Gỗ và sản phẩm gỗ,4414,HS4,include
+Gỗ và sản phẩm gỗ,4415,HS4,include
+Gỗ và sản phẩm gỗ,4416,HS4,include
+Gỗ và sản phẩm gỗ,4417,HS4,include
+Gỗ và sản phẩm gỗ,4418,HS4,include
+Gỗ và sản phẩm gỗ,4419,HS4,include
+Gỗ và sản phẩm gỗ,4420,HS4,include
+Gỗ và sản phẩm gỗ,4421,HS4,include
+Gỗ và sản phẩm gỗ,940161,HS6,include
+Gỗ và sản phẩm gỗ,940169,HS6,include
+Gỗ và sản phẩm gỗ,940330,HS6,include
+Gỗ và sản phẩm gỗ,940340,HS6,include
+Gỗ và sản phẩm gỗ,940350,HS6,include
+Gỗ và sản phẩm gỗ,940360,HS6,include
+Gỗ và sản phẩm gỗ,940391,HS6,include
+Giấy và các sản phẩm từ giấy,4801,HS4,include
+Giấy và các sản phẩm từ giấy,4802,HS4,include
+Giấy và các sản phẩm từ giấy,4803,HS4,include
+Giấy và các sản phẩm từ giấy,4804,HS4,include
+Giấy và các sản phẩm từ giấy,4805,HS4,include
+Giấy và các sản phẩm từ giấy,4806,HS4,include
+Giấy và các sản phẩm từ giấy,4807,HS4,include
+Giấy và các sản phẩm từ giấy,4808,HS4,include
+Giấy và các sản phẩm từ giấy,4809,HS4,include
+Giấy và các sản phẩm từ giấy,4810,HS4,include
+Giấy và các sản phẩm từ giấy,4811,HS4,include
+Giấy và các sản phẩm từ giấy,4812,HS4,include
+Giấy và các sản phẩm từ giấy,4813,HS4,include
+Giấy và các sản phẩm từ giấy,4814,HS4,include
+Giấy và các sản phẩm từ giấy,4815,HS4,include
+Giấy và các sản phẩm từ giấy,4816,HS4,include
+Giấy và các sản phẩm từ giấy,4817,HS4,include
+Giấy và các sản phẩm từ giấy,4818,HS4,include
+Giấy và các sản phẩm từ giấy,4819,HS4,include
+Giấy và các sản phẩm từ giấy,4820,HS4,include
+Giấy và các sản phẩm từ giấy,4821,HS4,include
+Giấy và các sản phẩm từ giấy,4822,HS4,include
+Giấy và các sản phẩm từ giấy,4823,HS4,include
+"Xơ, sợi dệt các loại",5004,HS4,include
+"Xơ, sợi dệt các loại",5005,HS4,include
+"Xơ, sợi dệt các loại",5006,HS4,include
+"Xơ, sợi dệt các loại",5106,HS4,include
+"Xơ, sợi dệt các loại",5107,HS4,include
+"Xơ, sợi dệt các loại",5108,HS4,include
+"Xơ, sợi dệt các loại",5109,HS4,include
+"Xơ, sợi dệt các loại",5110,HS4,include
+"Xơ, sợi dệt các loại",5204,HS4,include
+"Xơ, sợi dệt các loại",5205,HS4,include
+"Xơ, sợi dệt các loại",5206,HS4,include
+"Xơ, sợi dệt các loại",5207,HS4,include
+"Xơ, sợi dệt các loại",5306,HS4,include
+"Xơ, sợi dệt các loại",5307,HS4,include
+"Xơ, sợi dệt các loại",5308,HS4,include
+"Xơ, sợi dệt các loại",5401,HS4,include
+"Xơ, sợi dệt các loại",5402,HS4,include
+"Xơ, sợi dệt các loại",5403,HS4,include
+"Xơ, sợi dệt các loại",5404,HS4,include
+"Xơ, sợi dệt các loại",5405,HS4,include
+"Xơ, sợi dệt các loại",5406,HS4,include
+"Xơ, sợi dệt các loại",5501,HS4,include
+"Xơ, sợi dệt các loại",5502,HS4,include
+"Xơ, sợi dệt các loại",5503,HS4,include
+"Xơ, sợi dệt các loại",5504,HS4,include
+"Xơ, sợi dệt các loại",5505,HS4,include
+"Xơ, sợi dệt các loại",5506,HS4,include
+"Xơ, sợi dệt các loại",5507,HS4,include
+"Xơ, sợi dệt các loại",5508,HS4,include
+"Xơ, sợi dệt các loại",5509,HS4,include
+"Xơ, sợi dệt các loại",5510,HS4,include
+"Xơ, sợi dệt các loại",5511,HS4,include
+"Hàng dệt, may",6101,HS4,include
+"Hàng dệt, may",6102,HS4,include
+"Hàng dệt, may",6103,HS4,include
+"Hàng dệt, may",6104,HS4,include
+"Hàng dệt, may",6105,HS4,include
+"Hàng dệt, may",6106,HS4,include
+"Hàng dệt, may",6107,HS4,include
+"Hàng dệt, may",6108,HS4,include
+"Hàng dệt, may",6109,HS4,include
+"Hàng dệt, may",6110,HS4,include
+"Hàng dệt, may",6111,HS4,include
+"Hàng dệt, may",6112,HS4,include
+"Hàng dệt, may",6113,HS4,include
+"Hàng dệt, may",6114,HS4,include
+"Hàng dệt, may",6115,HS4,include
+"Hàng dệt, may",6116,HS4,include
+"Hàng dệt, may",6117,HS4,include
+"Hàng dệt, may",6201,HS4,include
+"Hàng dệt, may",6202,HS4,include
+"Hàng dệt, may",6203,HS4,include
+"Hàng dệt, may",6204,HS4,include
+"Hàng dệt, may",6205,HS4,include
+"Hàng dệt, may",6206,HS4,include
+"Hàng dệt, may",6207,HS4,include
+"Hàng dệt, may",6208,HS4,include
+"Hàng dệt, may",6209,HS4,include
+"Hàng dệt, may",6210,HS4,include
+"Hàng dệt, may",6211,HS4,include
+"Hàng dệt, may",6212,HS4,include
+"Hàng dệt, may",6213,HS4,include
+"Hàng dệt, may",6214,HS4,include
+"Hàng dệt, may",6215,HS4,include
+"Hàng dệt, may",6216,HS4,include
+"Hàng dệt, may",6217,HS4,include
+"Hàng dệt, may",6301,HS4,include
+"Hàng dệt, may",6302,HS4,include
+"Hàng dệt, may",6303,HS4,include
+"Hàng dệt, may",6304,HS4,include
+"Hàng dệt, may",6305,HS4,include
+"Hàng dệt, may",6306,HS4,include
+"Hàng dệt, may",6307,HS4,include
+"Hàng dệt, may",6308,HS4,include
+"Hàng dệt, may",6309,HS4,include
+"Hàng dệt, may",6310,HS4,include
+Giày dép các loại,6401,HS4,include
+Giày dép các loại,6402,HS4,include
+Giày dép các loại,6403,HS4,include
+Giày dép các loại,6404,HS4,include
+Giày dép các loại,6405,HS4,include
+Giày dép các loại,6406,HS4,include
+"Sản phẩm gốm, sứ",6901,HS4,include
+"Sản phẩm gốm, sứ",6902,HS4,include
+"Sản phẩm gốm, sứ",6903,HS4,include
+"Sản phẩm gốm, sứ",6904,HS4,include
+"Sản phẩm gốm, sứ",6905,HS4,include
+"Sản phẩm gốm, sứ",6906,HS4,include
+"Sản phẩm gốm, sứ",6907,HS4,include
+"Sản phẩm gốm, sứ",6908,HS4,include
+"Sản phẩm gốm, sứ",6909,HS4,include
+"Sản phẩm gốm, sứ",6910,HS4,include
+"Sản phẩm gốm, sứ",6911,HS4,include
+"Sản phẩm gốm, sứ",6912,HS4,include
+"Sản phẩm gốm, sứ",6913,HS4,include
+"Sản phẩm gốm, sứ",6914,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7001,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7002,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7003,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7004,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7005,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7006,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7007,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7008,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7009,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7010,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7011,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7012,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7013,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7014,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7015,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7016,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7017,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7018,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7019,HS4,include
+Thủy tinh và các sản phẩm từ thủy tinh,7020,HS4,include
+"Đá quý, kim loại quý và sản phẩm",7101,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7102,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7103,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7104,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7105,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7106,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7107,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7108,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7109,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7110,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7111,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7112,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7113,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7114,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7115,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7116,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7117,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+"Đá quý, kim loại quý và sản phẩm",7118,HS4,exclude: hàng thô theo giá thế giới (quy tắc 3)
+Sắt thép các loại,7201,HS4,include
+Sắt thép các loại,7202,HS4,include
+Sắt thép các loại,7203,HS4,include
+Sắt thép các loại,7204,HS4,include
+Sắt thép các loại,7205,HS4,include
+Sắt thép các loại,7206,HS4,include
+Sắt thép các loại,7207,HS4,include
+Sắt thép các loại,7208,HS4,include
+Sắt thép các loại,7209,HS4,include
+Sắt thép các loại,7210,HS4,include
+Sắt thép các loại,7211,HS4,include
+Sắt thép các loại,7212,HS4,include
+Sắt thép các loại,7213,HS4,include
+Sắt thép các loại,7214,HS4,include
+Sắt thép các loại,7215,HS4,include
+Sắt thép các loại,7216,HS4,include
+Sắt thép các loại,7217,HS4,include
+Sắt thép các loại,7218,HS4,include
+Sắt thép các loại,7219,HS4,include
+Sắt thép các loại,7220,HS4,include
+Sắt thép các loại,7221,HS4,include
+Sắt thép các loại,7222,HS4,include
+Sắt thép các loại,7223,HS4,include
+Sắt thép các loại,7224,HS4,include
+Sắt thép các loại,7225,HS4,include
+Sắt thép các loại,7226,HS4,include
+Sắt thép các loại,7227,HS4,include
+Sắt thép các loại,7228,HS4,include
+Sắt thép các loại,7229,HS4,include
+Sản phẩm từ sắt thép,7301,HS4,include
+Sản phẩm từ sắt thép,7302,HS4,include
+Sản phẩm từ sắt thép,7303,HS4,include
+Sản phẩm từ sắt thép,7304,HS4,include
+Sản phẩm từ sắt thép,7305,HS4,include
+Sản phẩm từ sắt thép,7306,HS4,include
+Sản phẩm từ sắt thép,7307,HS4,include
+Sản phẩm từ sắt thép,7308,HS4,include
+Sản phẩm từ sắt thép,7309,HS4,include
+Sản phẩm từ sắt thép,7310,HS4,include
+Sản phẩm từ sắt thép,7311,HS4,include
+Sản phẩm từ sắt thép,7312,HS4,include
+Sản phẩm từ sắt thép,7313,HS4,include
+Sản phẩm từ sắt thép,7314,HS4,include
+Sản phẩm từ sắt thép,7315,HS4,include
+Sản phẩm từ sắt thép,7316,HS4,include
+Sản phẩm từ sắt thép,7317,HS4,include
+Sản phẩm từ sắt thép,7318,HS4,include
+Sản phẩm từ sắt thép,7319,HS4,include
+Sản phẩm từ sắt thép,7320,HS4,include
+Sản phẩm từ sắt thép,7321,HS4,include
+Sản phẩm từ sắt thép,7322,HS4,include
+Sản phẩm từ sắt thép,7323,HS4,include
+Sản phẩm từ sắt thép,7324,HS4,include
+Sản phẩm từ sắt thép,7325,HS4,include
+Sản phẩm từ sắt thép,7326,HS4,include
+Kim loại thường khác và sản phẩm,7401,HS4,include
+Kim loại thường khác và sản phẩm,7402,HS4,include
+Kim loại thường khác và sản phẩm,7403,HS4,include
+Kim loại thường khác và sản phẩm,7404,HS4,include
+Kim loại thường khác và sản phẩm,7405,HS4,include
+Kim loại thường khác và sản phẩm,7406,HS4,include
+Kim loại thường khác và sản phẩm,7407,HS4,include
+Kim loại thường khác và sản phẩm,7408,HS4,include
+Kim loại thường khác và sản phẩm,7409,HS4,include
+Kim loại thường khác và sản phẩm,7410,HS4,include
+Kim loại thường khác và sản phẩm,7411,HS4,include
+Kim loại thường khác và sản phẩm,7412,HS4,include
+Kim loại thường khác và sản phẩm,7413,HS4,include
+Kim loại thường khác và sản phẩm,7414,HS4,include
+Kim loại thường khác và sản phẩm,7415,HS4,include
+Kim loại thường khác và sản phẩm,7416,HS4,include
+Kim loại thường khác và sản phẩm,7417,HS4,include
+Kim loại thường khác và sản phẩm,7418,HS4,include
+Kim loại thường khác và sản phẩm,7419,HS4,include
+Kim loại thường khác và sản phẩm,7501,HS4,include
+Kim loại thường khác và sản phẩm,7502,HS4,include
+Kim loại thường khác và sản phẩm,7503,HS4,include
+Kim loại thường khác và sản phẩm,7504,HS4,include
+Kim loại thường khác và sản phẩm,7505,HS4,include
+Kim loại thường khác và sản phẩm,7506,HS4,include
+Kim loại thường khác và sản phẩm,7507,HS4,include
+Kim loại thường khác và sản phẩm,7508,HS4,include
+Kim loại thường khác và sản phẩm,7601,HS4,include
+Kim loại thường khác và sản phẩm,7602,HS4,include
+Kim loại thường khác và sản phẩm,7603,HS4,include
+Kim loại thường khác và sản phẩm,7604,HS4,include
+Kim loại thường khác và sản phẩm,7605,HS4,include
+Kim loại thường khác và sản phẩm,7606,HS4,include
+Kim loại thường khác và sản phẩm,7607,HS4,include
+Kim loại thường khác và sản phẩm,7608,HS4,include
+Kim loại thường khác và sản phẩm,7609,HS4,include
+Kim loại thường khác và sản phẩm,7610,HS4,include
+Kim loại thường khác và sản phẩm,7611,HS4,include
+Kim loại thường khác và sản phẩm,7612,HS4,include
+Kim loại thường khác và sản phẩm,7613,HS4,include
+Kim loại thường khác và sản phẩm,7614,HS4,include
+Kim loại thường khác và sản phẩm,7615,HS4,include
+Kim loại thường khác và sản phẩm,7616,HS4,include
+Kim loại thường khác và sản phẩm,7801,HS4,include
+Kim loại thường khác và sản phẩm,7802,HS4,include
+Kim loại thường khác và sản phẩm,7803,HS4,include
+Kim loại thường khác và sản phẩm,7804,HS4,include
+Kim loại thường khác và sản phẩm,7805,HS4,include
+Kim loại thường khác và sản phẩm,7806,HS4,include
+Kim loại thường khác và sản phẩm,7901,HS4,include
+Kim loại thường khác và sản phẩm,7902,HS4,include
+Kim loại thường khác và sản phẩm,7903,HS4,include
+Kim loại thường khác và sản phẩm,7904,HS4,include
+Kim loại thường khác và sản phẩm,7905,HS4,include
+Kim loại thường khác và sản phẩm,7906,HS4,include
+Kim loại thường khác và sản phẩm,7907,HS4,include
+Kim loại thường khác và sản phẩm,8001,HS4,include
+Kim loại thường khác và sản phẩm,8002,HS4,include
+Kim loại thường khác và sản phẩm,8003,HS4,include
+Kim loại thường khác và sản phẩm,8004,HS4,include
+Kim loại thường khác và sản phẩm,8005,HS4,include
+Kim loại thường khác và sản phẩm,8006,HS4,include
+Kim loại thường khác và sản phẩm,8007,HS4,include
+Kim loại thường khác và sản phẩm,8101,HS4,include
+Kim loại thường khác và sản phẩm,8102,HS4,include
+Kim loại thường khác và sản phẩm,8103,HS4,include
+Kim loại thường khác và sản phẩm,8104,HS4,include
+Kim loại thường khác và sản phẩm,8105,HS4,include
+Kim loại thường khác và sản phẩm,8106,HS4,include
+Kim loại thường khác và sản phẩm,8107,HS4,include
+Kim loại thường khác và sản phẩm,8108,HS4,include
+Kim loại thường khác và sản phẩm,8109,HS4,include
+Kim loại thường khác và sản phẩm,8110,HS4,include
+Kim loại thường khác và sản phẩm,8111,HS4,include
+Kim loại thường khác và sản phẩm,8112,HS4,include
+Kim loại thường khác và sản phẩm,8113,HS4,include
+Kim loại thường khác và sản phẩm,8201,HS4,include
+Kim loại thường khác và sản phẩm,8202,HS4,include
+Kim loại thường khác và sản phẩm,8203,HS4,include
+Kim loại thường khác và sản phẩm,8204,HS4,include
+Kim loại thường khác và sản phẩm,8205,HS4,include
+Kim loại thường khác và sản phẩm,8206,HS4,include
+Kim loại thường khác và sản phẩm,8207,HS4,include
+Kim loại thường khác và sản phẩm,8208,HS4,include
+Kim loại thường khác và sản phẩm,8209,HS4,include
+Kim loại thường khác và sản phẩm,8210,HS4,include
+Kim loại thường khác và sản phẩm,8211,HS4,include
+Kim loại thường khác và sản phẩm,8212,HS4,include
+Kim loại thường khác và sản phẩm,8213,HS4,include
+Kim loại thường khác và sản phẩm,8214,HS4,include
+Kim loại thường khác và sản phẩm,8215,HS4,include
+Kim loại thường khác và sản phẩm,8301,HS4,include
+Kim loại thường khác và sản phẩm,8302,HS4,include
+Kim loại thường khác và sản phẩm,8303,HS4,include
+Kim loại thường khác và sản phẩm,8304,HS4,include
+Kim loại thường khác và sản phẩm,8305,HS4,include
+Kim loại thường khác và sản phẩm,8306,HS4,include
+Kim loại thường khác và sản phẩm,8307,HS4,include
+Kim loại thường khác và sản phẩm,8308,HS4,include
+Kim loại thường khác và sản phẩm,8309,HS4,include
+Kim loại thường khác và sản phẩm,8310,HS4,include
+Kim loại thường khác và sản phẩm,8311,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8471,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8473,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8518,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8519,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8521,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8522,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8523,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8527,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8528,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8529,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8531,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8532,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8533,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8534,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8540,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8541,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8542,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",8543,HS4,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",852550,HS6,include
+"Máy vi tính, sản phẩm điện tử và linh kiện",852560,HS6,include
+Điện thoại các loại và linh kiện,8517,HS4,include
+"Máy ảnh, máy quay phim và linh kiện",852580,HS6,include
+"Máy ảnh, máy quay phim và linh kiện",9006,HS4,include
+"Máy ảnh, máy quay phim và linh kiện",9007,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8401,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8402,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8403,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8404,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8405,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8406,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8407,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8408,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8409,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8410,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8411,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8412,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8413,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8414,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8415,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8416,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8417,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8418,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8419,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8420,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8421,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8422,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8423,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8424,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8425,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8426,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8427,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8428,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8429,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8430,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8431,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8432,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8433,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8434,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8435,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8436,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8437,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8438,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8439,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8440,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8441,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8442,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8443,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8444,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8445,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8446,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8447,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8448,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8449,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8450,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8451,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8452,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8453,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8454,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8455,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8456,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8457,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8458,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8459,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8460,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8461,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8462,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8463,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8464,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8465,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8466,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8467,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8468,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8469,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8470,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8472,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8474,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8475,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8476,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8477,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8478,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8479,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8480,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8481,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8482,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8483,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8484,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8485,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8486,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8487,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8501,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8502,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8503,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8504,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8505,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8506,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8507,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8508,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8509,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8510,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8511,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8512,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8513,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8514,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8515,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8516,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8520,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8524,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8526,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8530,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8535,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8536,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8537,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8538,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8539,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8545,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8546,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8547,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",8548,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9001,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9002,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9003,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9004,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9005,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9008,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9009,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9010,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9011,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9012,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9013,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9014,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9015,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9016,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9017,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9018,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9019,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9020,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9021,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9022,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9023,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9024,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9025,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9026,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9027,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9028,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9029,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9030,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9031,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9032,HS4,include
+"Máy móc, thiết bị, dụng cụ phụ tùng khác",9033,HS4,include
+Dây điện và dây cáp điện,8544,HS4,include
+Phương tiện vận tải và phụ tùng,8601,HS4,include
+Phương tiện vận tải và phụ tùng,8602,HS4,include
+Phương tiện vận tải và phụ tùng,8603,HS4,include
+Phương tiện vận tải và phụ tùng,8604,HS4,include
+Phương tiện vận tải và phụ tùng,8605,HS4,include
+Phương tiện vận tải và phụ tùng,8606,HS4,include
+Phương tiện vận tải và phụ tùng,8607,HS4,include
+Phương tiện vận tải và phụ tùng,8608,HS4,include
+Phương tiện vận tải và phụ tùng,8609,HS4,include
+Phương tiện vận tải và phụ tùng,8701,HS4,include
+Phương tiện vận tải và phụ tùng,8702,HS4,include
+Phương tiện vận tải và phụ tùng,8703,HS4,include
+Phương tiện vận tải và phụ tùng,8704,HS4,include
+Phương tiện vận tải và phụ tùng,8705,HS4,include
+Phương tiện vận tải và phụ tùng,8706,HS4,include
+Phương tiện vận tải và phụ tùng,8707,HS4,include
+Phương tiện vận tải và phụ tùng,8708,HS4,include
+Phương tiện vận tải và phụ tùng,8709,HS4,include
+Phương tiện vận tải và phụ tùng,8710,HS4,include
+Phương tiện vận tải và phụ tùng,8711,HS4,include
+Phương tiện vận tải và phụ tùng,8712,HS4,include
+Phương tiện vận tải và phụ tùng,8713,HS4,include
+Phương tiện vận tải và phụ tùng,8714,HS4,include
+Phương tiện vận tải và phụ tùng,8715,HS4,include
+Phương tiện vận tải và phụ tùng,8716,HS4,include
+Phương tiện vận tải và phụ tùng,8801,HS4,include
+Phương tiện vận tải và phụ tùng,8802,HS4,include
+Phương tiện vận tải và phụ tùng,8803,HS4,include
+Phương tiện vận tải và phụ tùng,8804,HS4,include
+Phương tiện vận tải và phụ tùng,8805,HS4,include
+Phương tiện vận tải và phụ tùng,8901,HS4,include
+Phương tiện vận tải và phụ tùng,8902,HS4,include
+Phương tiện vận tải và phụ tùng,8903,HS4,include
+Phương tiện vận tải và phụ tùng,8904,HS4,include
+Phương tiện vận tải và phụ tùng,8905,HS4,include
+Phương tiện vận tải và phụ tùng,8906,HS4,include
+Phương tiện vận tải và phụ tùng,8907,HS4,include
+Phương tiện vận tải và phụ tùng,8908,HS4,include

@@ -1,0 +1,6 @@
+fdi_disb: 58 quý có số, thiếu []
+fdi_reg: 56 quý có số, thiếu ['2023Q2']
+Tổng trượt 4 quý ≤ 0 ở: ['2018Q4', '2019Q1', '2019Q3'] → dùng tăng trưởng đối xứng
+Z: tỷ trọng JPN 0.216, KOR 0.187, SGP 0.187, CHN 0.035, HKG 0.090, TWN 0.204, USA 0.079
+Z_noKOR: tỷ trọng JPN 0.266, SGP 0.231, CHN 0.044, HKG 0.111, TWN 0.251, USA 0.097
+Z_2008: tỷ trọng JPN 0.200, KOR 0.192, SGP 0.197, CHN 0.025, HKG 0.086, TWN 0.242, USA 0.058

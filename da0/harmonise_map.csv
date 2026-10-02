@@ -1,0 +1,14 @@
+﻿direction,product_group,group_h,rule,periods
+export,"Túi xách, ví,vali, mũ và ô dù","Túi xách, ví,vali, mũ, ô, dù",R1 đổi tên,2013-01–2013-12
+export,Hạt điều,Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+export,Thức ăn gia súc và nguyên liệu,Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+export,"Nguyên phụ liệu dệt, may, da, giày",Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+export,"Sản phẩm mây, tre, cói và thảm",Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+export,Sản phẩm nội thất từ chất liệu khác gỗ,Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+export,"Vải mành, vải kỹ thuật khác",Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+import,Dầu thô,Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+import,"Máy ảnh, máy quay phim và linh kiện",Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+import,Quặng và khoáng sản khác,Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+import,Than các loại,Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+import,Ô tô nguyên chiếc các loại,Hàng hóa khác,R2 nhóm mới 2024 → Hàng hóa khác,2024-05–2026-08
+export,Kim loại thường khác (+ dòng ghi nhớ Sản phẩm từ kim loại thường khác),Kim loại thường khác và sản phẩm,"R3 mẫu biểu 2026-03: cộng dòng ghi nhớ, trừ khỏi Hàng hóa khác",2026-03–

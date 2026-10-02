@@ -1,0 +1,60 @@
+direction,group_h,sector,sector_name,role,note
+export,Hàng thủy sản,10,Thực phẩm,output,
+export,Hàng rau quả,10,Thực phẩm,output,
+export,Bánh kẹo và các sản phẩm từ ngũ cốc,10,Thực phẩm,output,
+export,"Hàng dệt, may",13-14,Dệt may,output,
+export,"Xơ, sợi dệt các loại",13-14,Dệt may,output,
+export,Giày dép các loại,15,Da giày,output,
+export,"Túi xách, ví,vali, mũ, ô, dù",15,Da giày,output,
+export,Gỗ và sản phẩm gỗ,16,Gỗ,output,
+export,Giấy và các sản phẩm từ giấy,17,Giấy,output,
+export,Hóa chất,20,Hóa chất,output,
+export,Sản phẩm hóa chất,20,Hóa chất,output,
+export,Chất dẻo nguyên liệu,20,Hóa chất,output,
+export,Sản phẩm từ chất dẻo,22,Cao su và nhựa,output,
+export,Sản phẩm từ cao su,22,Cao su và nhựa,output,
+export,"Sản phẩm gốm, sứ",23,Khoáng phi kim,output,
+export,Thủy tinh và các sản phẩm từ thủy tinh,23,Khoáng phi kim,output,
+export,Sắt thép các loại,24,Kim loại cơ bản,output,
+export,Kim loại thường khác và sản phẩm,24,Kim loại cơ bản,output,gồm cả sản phẩm (VSIC 25) – mơ hồ
+export,Sản phẩm từ sắt thép,25,Sản phẩm kim loại,output,
+export,"Máy vi tính, sản phẩm điện tử và linh kiện",26,Điện tử,output,
+export,Điện thoại các loại và linh kiện,26,Điện tử,output,
+export,"Máy ảnh, máy quay phim và linh kiện",26,Điện tử,output,
+export,Dây điện và dây cáp điện,27,Thiết bị điện,output,
+export,"Máy móc, thiết bị, dụng cụ phụ tùng khác",28,Máy móc,output,
+export,Phương tiện vận tải và phụ tùng,29-30,Phương tiện vận tải,output,
+export,Cà phê,,,excluded,hàng thô theo giá thế giới
+export,Hạt tiêu,,,excluded,hàng thô theo giá thế giới
+export,Cao su,,,excluded,hàng thô theo giá thế giới
+export,"Đá quý, kim loại quý và sản phẩm",,,excluded,giá vàng
+export,Hàng hóa khác,,,excluded,nhóm còn lại
+import,Lúa mì,10,Thực phẩm,input,
+import,Ngô,10,Thực phẩm,input,
+import,Dầu mỡ động thực vật,10,Thực phẩm,input,
+import,Thức ăn gia súc và nguyên liệu,10,Thực phẩm,input,
+import,Vải các loại,13-14,Dệt may,input,
+import,Bông các loại,13-14,Dệt may,input,
+import,"Xơ, sợi dệt các loại",13-14,Dệt may,input,
+import,"Nguyên phụ liệu dệt, may, da, giày",13-14,Dệt may,input,dùng chung với VSIC 15 – gán ngành lớn nhất (theo ví dụ tiền đăng ký)
+import,Gỗ và sản phẩm gỗ,16,Gỗ,input,
+import,Giấy các loại,17,Giấy,input,
+import,Sản phẩm từ giấy,17,Giấy,input,
+import,Hóa chất,20,Hóa chất,input,
+import,Sản phẩm hóa chất,20,Hóa chất,input,
+import,Chất dẻo nguyên liệu,22,Cao su và nhựa,input,
+import,Cao su,22,Cao su và nhựa,input,
+import,Sản phẩm từ chất dẻo,22,Cao su và nhựa,input,
+import,Sắt thép các loại,24,Kim loại cơ bản,input,
+import,Kim loại thường khác,24,Kim loại cơ bản,input,
+import,Sản phẩm từ sắt thép,25,Sản phẩm kim loại,input,
+import,Sản phẩm từ kim loại thường khác,25,Sản phẩm kim loại,input,
+import,"Máy vi tính, sản phẩm điện tử và linh kiện",26,Điện tử,input,
+import,Điện thoại các loại và linh kiện,26,Điện tử,input,
+import,Dây điện và dây cáp điện,27,Thiết bị điện,input,
+import,Hàng điện gia dụng và linh kiện,27,Thiết bị điện,input,
+import,"Linh kiện, phụ tùng ô tô",29-30,Phương tiện vận tải,input,
+import,Phương tiện vận tải khác và phụ tùng,29-30,Phương tiện vận tải,input,
+import,"Máy móc, thiết bị, dụng cụ, phụ tùng khác",,,excluded,hàng vốn – không phải đầu vào trung gian
+import,Sản phẩm khác từ dầu mỏ,,,excluded,hàng nhiên liệu
+import,Hàng hóa khác,,,excluded,nhóm còn lại
