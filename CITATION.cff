@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, data mappings or derived variables, please cite them as below."
+title: "Distance, FDI and the Trade of Foreign-Invested Firms in Vietnam: research code and data mappings (DA0–DA4)"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Do
+    given-names: Thuy Huong
+    orcid: "https://orcid.org/0000-0002-7711-2487"
+    affiliation: "School of Economics, Can Tho University"
+    email: thuyhuongctu@gmail.com
+  - family-names: Phan
+    given-names: Anh Tu
+    orcid: "https://orcid.org/0000-0003-0667-3137"
+    affiliation: "School of Economics, Can Tho University"
+repository-code: "https://github.com/thuyhuongctu/Fdi-Distance-Trade-Vietnam"
+license: MIT
+keywords:
+  - foreign direct investment
+  - Vietnam
+  - gravity model
+  - cultural and institutional distance
+  - FDI-sector trade
+  - US–China tariffs
+  - local projections
+  - preregistration

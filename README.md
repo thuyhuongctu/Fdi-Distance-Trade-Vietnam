@@ -18,6 +18,9 @@ Research programme DA0–DA4 · **Do Thuy Huong** (ORCID [0000-0002-7711-2487](h
 - **Purchased data stay private.** The consolidated Customs series bought from a commercial provider is never committed (see `.gitignore`). Public inputs (GSO releases, IMF BOP, CPB, Bruegel, UN Comtrade, USITC) are included with source columns.
 - **Tests.** `python3 da3/test_da3.py`, `python3 da2/test_da2.py`, `python3 da1/test_build_panel.py` run on simulated data only.
 
-## Licences
+## Licences and citation
 
-Code: MIT. Documentation, concordances and preregistration text: CC BY 4.0. Third-party public data remain under their providers' terms. Purchased data: provider's licence; not redistributed.
+- Code: MIT (`LICENSE`).
+- Documentation, concordances and derived variables: CC BY 4.0, citation required (`LICENSE-docs.md`).
+- Third-party public data remain under their providers' terms. Purchased data: provider's licence; not redistributed.
+- How to cite: `CITATION.cff`. A Zenodo DOI will be minted from the first GitHub release after the repository is made public (`.zenodo.json` holds the archive metadata).
