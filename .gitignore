@@ -1,0 +1,16 @@
+# Dữ liệu Hải quan đã mua – KHÔNG đưa lên repo cho tới khi xác nhận giấy phép tái phân phối
+da0/raw/
+da0/panel*.csv
+da0/monthly_*.csv
+da0/cleaning_log*.csv
+da0/test_drive/
+*.pdf
+*.xls
+*.xlsx
+*.zip
+*.rar
+# Kết quả phân tích xác nhận (chỉ tạo sau khi tiền đăng ký đã nộp)
+*_results.json
+disclosure_log.csv
+__pycache__/
+.DS_Store
