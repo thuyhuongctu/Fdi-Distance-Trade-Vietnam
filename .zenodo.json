@@ -1,0 +1,15 @@
+{
+  "title": "Distance, FDI and the Trade of Foreign-Invested Firms in Vietnam: research code and data mappings (DA0–DA4)",
+  "upload_type": "software",
+  "description": "Code, concordances and derived variables for a research programme on cross-national distance, FDI inflows into Vietnam and the trade of foreign-invested firms (2006–2026). Components: DA0 Customs FDI-sector trade panel (code only; the purchased data are not included), DA1 distance and FDI (structural gravity, PPML), DA2 aggregate FDI inflows and FDI-sector trade (local projections), DA3 US–China tariffs and FDI-sector trade (event study). Confirmatory analyses follow OSF preregistrations.",
+  "creators": [
+    {"name": "Do, Thuy Huong", "affiliation": "School of Economics, Can Tho University", "orcid": "0000-0002-7711-2487"},
+    {"name": "Phan, Anh Tu", "affiliation": "School of Economics, Can Tho University", "orcid": "0000-0003-0667-3137"}
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": ["foreign direct investment", "Vietnam", "gravity model", "cultural distance", "institutional distance", "FDI-sector trade", "US-China tariffs", "local projections", "preregistration"],
+  "related_identifiers": [
+    {"identifier": "https://osf.io/m25qs/", "relation": "isPartOf", "scheme": "url"}
+  ]
+}
