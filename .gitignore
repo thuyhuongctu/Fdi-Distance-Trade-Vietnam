@@ -14,3 +14,5 @@ da0/test_drive/
 disclosure_log.csv
 __pycache__/
 .DS_Store
+# Tệp tải nguyên gốc từ nhà cung cấp (dựng lại bằng da1/fetch_inputs.py)
+da1/inputs/raw/
