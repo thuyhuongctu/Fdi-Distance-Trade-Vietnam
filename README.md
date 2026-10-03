@@ -21,6 +21,6 @@ Research programme DA0–DA4 · **Do Thuy Huong** (ORCID [0000-0002-7711-2487](h
 ## Licences and citation
 
 - Code: MIT (`LICENSE`).
-- Documentation, concordances and derived variables: CC BY 4.0, citation required (`LICENSE-docs.md`).
+- Documentation, concordances and derived variables: CC BY 4.0, citation required (`docs/LICENSE-docs.md`).
 - Third-party public data remain under their providers' terms. Purchased data: provider's licence; not redistributed.
 - How to cite: `CITATION.cff`. A Zenodo DOI will be minted from the first GitHub release after the repository is made public (`.zenodo.json` holds the archive metadata).
