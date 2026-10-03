@@ -11,11 +11,11 @@ https://creativecommons.org/licenses/by/4.0/ :
 - derived variables built by the authors (`da3/exposure.csv`, `da2/inputs/instrument.csv`, `da2/inputs/fdi_quarter.csv`,
   `da2/inputs/controls.csv`).
 
-You may share and adapt them for any purpose, **provided you cite the work** as shown in `CITATION.cff`.
+You may share and adapt them for any purpose, **provided you cite the work** as shown in `../CITATION.cff`.
 
 **Not covered.** Third-party data files under `*/inputs/raw/`, `da1/inputs/`, `da3/comtrade/` and
 `da3/section301_hts8.csv` remain under their providers' terms (General Statistics Office of Vietnam, IMF, CPB,
 Bruegel, World Bank, Hofstede, UN Comtrade, USITC); each file or `sources*.md` names its source.
 The purchased Vietnam Customs series is not part of this repository and is not licensed by it.
 
-Code (`*.py`, `*.do`) is licensed separately under the MIT License (`LICENSE`).
+Code (`*.py`, `*.do`) is licensed separately under the MIT License (`../LICENSE`).
