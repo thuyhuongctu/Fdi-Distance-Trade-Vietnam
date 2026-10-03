@@ -2,7 +2,7 @@
 
 > *Tóm tắt:* Bộ dữ liệu xuất khẩu và nhập khẩu theo tháng của khu vực doanh nghiệp FDI, theo nhóm hàng, 01/2013–08/2026, đã chuẩn hóa và có xuất xứ rõ ràng. Đây là nền dữ liệu chung cho DA2 và DA3.
 
-**Part of:** [Distance, FDI and the Trade of Foreign-Invested Firms in Vietnam](../) · **Status:** In preparation · **Planned output:** data paper (*Data in Brief*)
+**Part of:** [Distance, FDI and the Trade of Foreign-Invested Firms in Vietnam](../) · **Status:** Series processed (323 monthly tables, 01/2013–08/2026); codebook and tests public; licence pending · **Planned output:** data paper (*Data in Brief*)
 
 ## Purpose
 
@@ -28,7 +28,7 @@ DA0 builds a harmonised, documented panel of Vietnam's FDI-sector trade for reus
 | --- | --- | --- |
 | `/raw` | Purchased files, unchanged | **Private** (licence) |
 | `/concordance` | Product-group harmonisation; HS–product-group mapping | Public |
-| `/codebook` | Variable definitions, units, provenance fields | Public |
+| `/codebook` | Variable definitions, units, provenance fields (`CODEBOOK.md`) | Public |
 | `/cleaning-log` | Checks run, issues found, decisions made | Public |
 | `/code` | Cleaning scripts | Public (MIT) |
 | `/derived` | Aggregated series permitted by the licence | Public once licence confirmed |
