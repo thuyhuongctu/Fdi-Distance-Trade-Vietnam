@@ -6,13 +6,13 @@
 | --- | --- |
 | `hs_concordance.py` → `hs_concordance.csv`, `input_match.csv` | 29 nhóm XK hài hòa → 842 mã HS4/HS6; nhóm NK đầu vào khớp với từng nhóm XK |
 | `section301_hts8.csv` | 10.391 dòng HTS8 trong danh sách Section 301 (USITC «China Tariffs», 28/07/2026) |
-| `comtrade/part_*.csv` | NK của Mỹ từ TQ năm 2017 theo HS4/HS6 (UN Comtrade) |
+| `comtrade/part_*.csv` | NK của Mỹ từ TQ năm 2017 theo HS4/HS6 (UN Comtrade). Không kèm trong gói công bố; dựng lại bằng `python3 fetch_comtrade.py` (truy vấn cố định trong `comtrade_urls.json`) |
 | `build_exposure.py` → `exposure.csv` | EXP_g (cố định trước khi xem kết quả) |
 | `ppml.py` | PPML có FE, sai số cụm, wild score bootstrap (Kline & Santos, 2012), Holm |
 | `da3_analysis.py` | Mô hình 1 (DiD), Mô hình 2 (event study), H1–H3, cận Rambachan–Roth xấp xỉ, kiểm định độ vững R1–R6 |
 | `test_da3.py` | 8 kiểm thử trên dữ liệu mô phỏng (đối chiếu pyfixest; kích thước & lực kiểm định) |
 
-**Chạy:** `python3 hs_concordance.py && python3 build_exposure.py && python3 test_da3.py`.
+**Chạy:** `python3 fetch_comtrade.py && python3 hs_concordance.py && python3 build_exposure.py && python3 test_da3.py`.
 `da3_analysis.py` từ chối chạy trên dữ liệu thật nếu không có DOI tiền đăng ký DA3. DA3 đăng ký riêng, trước DA2; mỗi lần chạy ghi vào `../disclosure_log.csv` để DA2 khai báo.
 
 **Thay đổi so với bản tiền đăng ký trước đây (đã sửa trong văn bản, chưa nộp):**
