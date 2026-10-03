@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software, data mappings or derived variables, please cite them as below."
 title: "Distance, FDI and the Trade of Foreign-Invested Firms in Vietnam: research code and data mappings (DA0–DA4)"
 type: software
-version: 0.1.0
+version: "1.0"
+date-released: "2026-10-03"
 authors:
   - family-names: Do
     given-names: Thuy Huong
