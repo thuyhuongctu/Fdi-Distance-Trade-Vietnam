@@ -50,6 +50,10 @@ def build(inp):
     fdi = pd.read_csv(f'{inp}/fdi_registered.csv')            # iso3, year, fdi_usd_m
     cdis = pd.read_csv(f'{inp}/imf_cdis.csv')                 # iso3, year, position_usd_m (tùy chọn)
     wdi = pd.read_csv(f'{inp}/wdi.csv')                       # iso3, year, gdp_usd, gdppc_usd
+    try:                                                      # bổ sung nền kinh tế WDI không có (Đài Loan, IMF WEO)
+        wdi = pd.concat([wdi, pd.read_csv(f'{inp}/wdi_supplement.csv')[wdi.columns]], ignore_index=True)
+    except FileNotFoundError:
+        pass
     wgi = pd.read_csv(f'{inp}/wgi.csv')                       # iso3, year, va, pv, ge, rq, rl, cc
     hof = pd.read_csv(f'{inp}/hofstede.csv')                  # iso3, pdi, idv, mas, uai, lto, ivr
     geo = pd.read_csv(f'{inp}/cepii_dist.csv')                # iso3, distw_km, contig  (khoảng cách tới VNM)
