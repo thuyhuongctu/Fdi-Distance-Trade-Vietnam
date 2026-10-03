@@ -40,7 +40,7 @@ All files are produced by `../fetch_inputs.py`. The script downloads directly fr
   - Dublin (Ireland);
   - Labuan (Malaysia).
 - The Netherlands Antilles (ANT) are kept. Their successors since 2010, CUW and SXM, are added and marked in `note`.
-- **This list flags Singapore and Hong Kong (Group I), as well as Switzerland, Luxembourg, Cyprus, Macao and others.** How the main sample treats these economies is a design decision for the DA1 preregistration (see the progress report).
+- **Main-sample rule (design decision, 3 Oct 2026):** all listed OFCs are excluded from the main sample except Singapore and Hong Kong. Both are Group I centres with substantial real economic activity and complete covariates, and they are among the largest investors in Viet Nam. `build_panel.py` writes this as the column `main`. Robustness check R2a includes all OFCs; R2b also excludes Singapore and Hong Kong.
 - Table 1 of the same paper, the broader Errico–Musalem list, also names facilities in Japan, the United States, Thailand and the Philippines. It is not used.
 
 ## wdi_supplement.csv — Taiwan, 2005–2024
@@ -50,6 +50,6 @@ All files are produced by `../fetch_inputs.py`. The script downloads directly fr
 - WEO and WDI levels differ slightly. For Viet Nam in 2024, GDP is 459.4 bn USD in WEO and 476.3 bn USD in WDI. Only Taiwan is taken from WEO, and every other economy, including Viet Nam, stays on WDI.
 
 ## Coverage check (covariates only; FDI not yet collected)
-- Economies with all of ln_dist, cult_dist, inst_dist, econ_dist and ln_gdp for all of 2006–2024: 61. Of these, 56 are not OFCs.
+- Economies with all of ln_dist, cult_dist, inst_dist, econ_dist and ln_gdp for all of 2006–2024: 61. Of these, 58 are in the main sample; CHE, LUX and MLT drop out as OFCs.
 - Hofstede is the binding constraint. Without the cultural-distance requirement, 186 economies are complete.
 - All 16 economies of the Phan & Do (2019) sample are complete, including Taiwan.
