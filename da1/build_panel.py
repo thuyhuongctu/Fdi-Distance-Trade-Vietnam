@@ -4,7 +4,8 @@
 
 Bám đúng Phần 3 (Variables) và quy tắc chọn mẫu của bản tiền đăng ký DA1:
   - Mọi nền kinh tế có FDI đăng ký vào Việt Nam ít nhất một năm; năm không có = 0.
-  - Trung tâm tài chính hải ngoại (danh sách IMF) tách khỏi mẫu chính (cờ `ofc`).
+  - Trung tâm tài chính hải ngoại (IMF 2000, danh sách FSF) tách khỏi mẫu chính (cờ `ofc`), trừ Singapore
+    và Hồng Kông – hai trung tâm có hoạt động kinh tế thật, được giữ lại (cột `main`); R2b loại cả hai.
   - Khoảng cách văn hóa / thể chế = khoảng cách Mahalanobis tới Việt Nam (Berry et al., 2010).
   - Khoảng cách kinh tế = |ln GDP/người_j − ln GDP/người_VN|.
 
@@ -20,6 +21,8 @@ WGI_DIMS = ['va', 'pv', 'ge', 'rq', 'rl', 'cc']          # 6 khía cạnh WGI
 HOF_DIMS = ['pdi', 'idv', 'mas', 'uai', 'lto', 'ivr']    # 6 khía cạnh Hofstede
 YEARS = range(2006, 2025)
 # 16 nước trong mẫu của Phan & Đỗ (2019), Bảng 1 – dùng cho kiểm định cầu nối R5
+# Trung tâm tài chính hải ngoại vẫn giữ trong mẫu chính (quyết định thiết kế 3/10/2026)
+OFC_KEEP = {'SGP', 'HKG'}
 SAMPLE_2019 = {'KOR', 'TWN', 'HKG', 'MYS', 'CHN', 'SGP', 'JPN', 'THA', 'DEU', 'FRA', 'NLD', 'RUS', 'GBR', 'USA', 'CAN', 'AUS'}
 
 
@@ -101,6 +104,7 @@ def build(inp):
     panel['inst_dist_c'] = panel['inst_dist'] - panel['inst_dist'].mean()
     panel['fta_x_inst'] = panel['fta'] * panel['inst_dist_c']
     panel['ofc'] = panel['iso3'].isin(ofc).astype(int)
+    panel['main'] = ((panel['ofc'] == 0) | panel['iso3'].isin(OFC_KEEP)).astype(int)
     panel['in_2019_sample'] = panel['iso3'].isin(SAMPLE_2019).astype(int)
 
     # Nhật ký mẫu: số quan sát bị loại do thiếu số liệu, theo biến (Phần 3, quy tắc 3–4)

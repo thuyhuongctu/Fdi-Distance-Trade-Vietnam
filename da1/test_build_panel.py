@@ -17,7 +17,7 @@ pd.DataFrame([(i, y, *rng.normal(0, 1, 6)) for i in iso for y in B.YEARS], colum
 hof = pd.DataFrame([(i, *rng.uniform(10, 90, 6)) for i in iso], columns=['iso3', *B.HOF_DIMS]); hof.to_csv(f'{d}/hofstede.csv', index=False)
 pd.DataFrame({'iso3': iso[1:], 'distw_km': rng.uniform(800, 14000, len(iso) - 1), 'contig': 0}).to_csv(f'{d}/cepii_dist.csv', index=False)
 pd.DataFrame({'iso3': ['JPN', 'KOR', 'JPN'], 'fta_name': ['AJCEP', 'AKFTA', 'VJEPA'], 'in_force_year': [2008, 2007, 2009]}).to_csv(f'{d}/fta.csv', index=False)
-pd.DataFrame({'iso3': ['HKG']}).to_csv(f'{d}/ofc_list.csv', index=False)
+pd.DataFrame({'iso3': ['HKG', 'FRA']}).to_csv(f'{d}/ofc_list.csv', index=False)   # FRA đóng vai một OFC thường
 
 panel, log = B.build(d)
 # 1. Mẫu: 9 nền kinh tế có FDI (không có VNM, không có XXX) × 19 năm; dòng thiếu được lấp 0
@@ -34,6 +34,9 @@ assert panel.loc[(panel.iso3 == 'JPN') & (panel.year == 2008), 'fta'].item() == 
 assert panel.loc[panel.iso3 == 'USA', 'fta'].sum() == 0
 # 4. Cờ OFC, mẫu 2019, hạng tương tác tâm hóa
 assert panel.loc[panel.iso3 == 'HKG', 'ofc'].eq(1).all() and panel.loc[panel.iso3 == 'JPN', 'ofc'].eq(0).all()
+# Mẫu chính: loại OFC trừ Singapore và Hồng Kông
+assert panel.loc[panel.iso3 == 'HKG', 'main'].eq(1).all() and panel.loc[panel.iso3 == 'FRA', 'main'].eq(0).all()
+assert panel.loc[panel.iso3 == 'JPN', 'main'].eq(1).all()
 assert panel.loc[panel.iso3 == 'FRA', 'in_2019_sample'].eq(1).all()
 assert abs(panel['inst_dist_c'].mean()) < 1e-12
 assert (panel['fta_x_inst'] == panel['fta'] * panel['inst_dist_c']).all()

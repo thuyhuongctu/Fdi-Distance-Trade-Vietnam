@@ -16,8 +16,9 @@ log using "da1_results.log", replace text
 import delimited "da1_panel.csv", clear varnames(1) encoding(utf-8)
 encode iso3, gen(cid)
 
-* Main sample: exclude offshore financial centres (preregistered rule 2)
-gen byte main = (ofc == 0)
+* Main sample (column `main` from build_panel.py, preregistered rule 2): exclude the
+* FSF offshore financial centres listed by the IMF (2000), except Singapore and Hong Kong
+assert main == ((ofc == 0) | inlist(iso3, "SGP", "HKG"))
 
 * ---------------------------------------------------------------------------
 * Model 1 – tests H1, H2a, H2b (PPML, year FE, SE clustered by source economy)
@@ -95,7 +96,7 @@ estimates store R1
 * R2a Include offshore financial centres
 ppmlhdfe fdi_usd_m ln_dist cult_dist inst_dist econ_dist ln_gdp fta, absorb(year) vce(cluster cid)
 estimates store R2a
-* R2b Exclude Singapore and Hong Kong (possible conduit investors)
+* R2b Exclude Singapore and Hong Kong as well (possible conduit investors)
 ppmlhdfe fdi_usd_m ln_dist cult_dist inst_dist econ_dist ln_gdp fta if main & !inlist(iso3, "SGP", "HKG"), absorb(year) vce(cluster cid)
 estimates store R2b
 * R3  Kogut–Singh indices instead of Mahalanobis
