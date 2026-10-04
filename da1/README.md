@@ -22,6 +22,11 @@ Bám đúng bản tiền đăng ký OSF của DA1. **Chỉ chạy phần ước 
 | `cepii_dist.csv` | iso3, distw_km, contig | CEPII GeoDist – khoảng cách có trọng số dân số tới Việt Nam |
 | `fta.csv` | iso3, fta_name, in_force_year | WTO RTA Database – mỗi dòng một hiệp định có Việt Nam là thành viên |
 | `ofc_list.csv` | iso3 | Danh sách trung tâm tài chính hải ngoại của IMF |
+| `wdi_supplement.csv` | iso3, year, gdp_usd, gdppc_usd, source | Bổ sung cho nền kinh tế WDI không có (Đài Loan: IMF WEO 4/2026) |
+
+Trạng thái 04/10/2026: đã có đủ `wdi`, `wgi`, `hofstede`, `cepii_dist`, `fta`, `ofc_list` (nguồn và quy tắc: `inputs/sources*.md`; `fta.csv` và `ofc_list.csv` dựng lại bằng `inputs/build_fta.py`, `inputs/build_ofc_list.py`). Còn thiếu `fdi_registered.csv` và `imf_cdis.csv`.
+
+Khi chưa có `fdi_registered.csv`, `build_panel.py` chỉ dựng bảng biến giải thích cho mọi nền kinh tế có số liệu, cột FDI để trống: `python3 build_panel.py --inputs inputs --out da1_covariates.csv` (4.522 quan sát, 238 nền kinh tế; 16 nước của mẫu 2019 đủ mọi biến).
 
 ## Chạy
 

@@ -37,4 +37,18 @@ assert panel.loc[panel.iso3 == 'HKG', 'ofc'].eq(1).all() and panel.loc[panel.iso
 assert panel.loc[panel.iso3 == 'FRA', 'in_2019_sample'].eq(1).all()
 assert abs(panel['inst_dist_c'].mean()) < 1e-12
 assert (panel['fta_x_inst'] == panel['fta'] * panel['inst_dist_c']).all()
+# 5. Bổ sung GDP cho nền kinh tế WDI không có (wdi_supplement.csv), không ghi đè WDI
+w = pd.read_csv(f'{d}/wdi.csv')
+w[w.iso3 != 'KOR'].to_csv(f'{d}/wdi.csv', index=False)
+sup = pd.DataFrame([('KOR', y, 1e12, 3e4, 'test') for y in B.YEARS] + [('JPN', y, 1.0, 1.0, 'test') for y in B.YEARS],
+                   columns=['iso3', 'year', 'gdp_usd', 'gdppc_usd', 'source'])
+sup.to_csv(f'{d}/wdi_supplement.csv', index=False)
+p2, _ = B.build(d)
+assert np.allclose(p2.loc[p2.iso3 == 'KOR', 'ln_gdp'], np.log(1e12))
+assert (p2.loc[p2.iso3 == 'JPN', 'ln_gdp'].values == panel.loc[panel.iso3 == 'JPN', 'ln_gdp'].values).all()
+# 6. Chưa có tệp FDI: chỉ dựng biến giải thích cho mọi nền kinh tế có số liệu, cột FDI để trống
+os.remove(f'{d}/fdi_registered.csv'); os.remove(f'{d}/imf_cdis.csv')
+p3, _ = B.build(d)
+assert set(p3.iso3) == set(iso[1:]) and p3['fdi_usd_m'].isna().all()
+assert (p3.loc[p3.iso3 == 'JPN', 'cult_dist'].values == panel.loc[panel.iso3 == 'JPN', 'cult_dist'].values).all()
 print('Tất cả kiểm thử đạt.', len(panel), 'quan sát; thiếu:', log)

@@ -13,7 +13,7 @@
   - South Africa white (SAW), Switzerland French (SWF), Switzerland German (SWG)
 - Vietnam (VIE→VNM): pdi 70, idv 20, mas 40, uai 30, lto 57, ivr 35.
 
-## fta.csv — NOT FILLED (header only)
+## fta.csv — NOT FILLED (header only) — superseded 2026-10-04, see sources_c.md
 Tried and failed:
 - curl and WebFetch to rtais.wto.org, data.wto.org, www.wto.org and trungtamwto.vn: egress proxy blocked (CONNECT 403 / EGRESS_BLOCKED).
 - Firecrawl scrape and search: HTTP 402, out of credits, after the Hofstede fetches.
@@ -25,7 +25,7 @@ Leads to fetch when access is available (RTA ID cards):
 - Member cards: https://rtais.wto.org/UI/PublicShowMemberRTAIDCard.aspx?rtaid=973, ...?rtaid=170, ...?rtaid=840
 - Whole-database export: https://rtais.wto.org/UI/PublicMaintainRTAHome.aspx → "Export all RTAs", or https://data.wto.org/en/dataset/ext_rta (xlsx/csv)
 
-## ofc_list.csv — NOT FILLED (header only)
+## ofc_list.csv — NOT FILLED (header only) — superseded 2026-10-04, see sources_c.md
 - Target document: IMF, "Offshore Financial Centers – IMF Background Paper", 23 June 2000, https://www.imf.org/external/np/mae/oshore/2000/eng/back.htm (Table 1 by region; Table 2 FSF list).
 - Alternative: IMF OFC Assessment Program information note, https://www.imf.org/external/np/mae/oshore/2002/eng/082902.htm
 - imf.org, elibrary.imf.org and the translate.goog mirror were all blocked by the egress proxy. Firecrawl was out of credits.
