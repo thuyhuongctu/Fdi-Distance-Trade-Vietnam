@@ -10,6 +10,9 @@
 # Mbar khi đó so độ lệch xu hướng sau can thiệp với bước nhảy lớn nhất giữa các kỳ trước liền kề (kể cả bước
 # vào khối gốc). Đây là lựa chọn mã hóa cần ghi rõ trong bài báo.
 #
+# Đã kiểm tra với R 4.3.3, HonestDiD 0.2.6, CVXR 1.0-14 (HonestDiD 0.2.8 cần CVXR mới, đòi Matrix >= 1.7 / R >= 4.4).
+# Thời gian chạy khoảng 3–4 phút.
+#
 # Chạy:  Rscript honestdid.R [da3_results.json] [honestdid_results.csv]
 
 suppressPackageStartupMessages({ library(jsonlite); library(HonestDiD) })
@@ -47,8 +50,10 @@ tab <- rbind(
   data.frame(restriction = "smoothness", parameter = sd_$M, lb = sd_$lb, ub = sd_$ub, method = sd_$method))
 tab$excludes_zero <- tab$lb > 0 | tab$ub < 0
 # Mbar phá vỡ: Mbar nhỏ nhất trong lưới mà khoảng tin cậy chứa 0
+# (chỉ có nghĩa khi khoảng gốc loại trừ 0; nếu ngay Mbar = 0,5 đã chứa 0 thì ghi "<= 0.5")
 br <- tab[tab$restriction == "relative_magnitudes" & !tab$excludes_zero, "parameter"]
-cat(sprintf("Pre periods: %d, post periods: %d; breakdown Mbar (grid 0.5-2): %s\n",
-            nPre, nPost, if (length(br)) min(br) else "> 2"))
+brk <- if (!tab$excludes_zero[1]) "n/a (original CI includes 0)" else if (!length(br)) "> 2" else
+  if (min(br) == 0.5) "<= 0.5" else sprintf("in (%.1f, %.1f]", min(br) - 0.5, min(br))
+cat(sprintf("Pre periods: %d, post periods: %d; breakdown Mbar (grid 0.5-2): %s\n", nPre, nPost, brk))
 write.csv(tab, out, row.names = FALSE)
 print(tab, row.names = FALSE)
