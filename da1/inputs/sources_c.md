@@ -30,3 +30,12 @@ Network access to the data sites was opened for this environment on 2026-10-04. 
 ## wdi_supplement.csv — Taiwan GDP (WDI has no Taiwan)
 - IMF World Economic Outlook, April 2026, DataMapper API: `https://www.imf.org/external/datamapper/api/v1/NGDPD/TWN` and `/NGDPDPC/TWN` (USD bn and USD per capita, current prices). 2005–2024.
 - `build_panel.py` adds these rows only for economies absent from `wdi.csv`. This is a second source for one economy; it should be declared in the preregistration (Section 2).
+
+## imf_cdis.csv (iso3, year, position_usd_m, confidential) — FILLED from counterpart data
+- IMF Direct Investment Positions by Counterpart Economy (DIP, formerly CDIS), dataflow `IMF.STA:DIP(12.0.1)`, release 2025-12-10:
+  `https://api.imf.org/external/sdmx/2.1/data/IMF.STA,DIP,12.0.1/VNM.SCC.INWD_D_NETLA_FALL_ALL..A?startPeriod=2009` (SHA-256 13413030…).
+- Viet Nam does not report to the survey: the same query with `DV_TYPE = O` (reported official data) returns no series. All values are **derived from counterpart economies' outward positions** (`DV_TYPE = SCC`), as the preregistration allows.
+- Indicator: inward direct investment, net (liabilities less assets), all instruments, all entities; end-year positions 2009–2024.
+- `OBS_VALUE` is in US dollars (the `SCALE="6"` attribute is a display hint: Japan 2024 = 28,671,060,923 USD); converted to USD million.
+- World and regional aggregates (G001, GX…, U…) dropped. 954 rows, 79 counterparts. 153 cells are confidential (`STATUS = C`, no value; `confidential = 1`). 19 values are negative (net disinvestment); PPML needs y ≥ 0, so robustness check R1 must state how negatives are treated before it is run.
+- Singapore and Taiwan do not publish bilateral outward positions, so they have no CDIS rows.
