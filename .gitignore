@@ -17,3 +17,6 @@ __pycache__/
 # Tệp tải gốc của DA1 (dựng lại được từ URL ghi trong da1/inputs/sources_c.md); giữ bảng IMF đã chép
 da1/inputs/raw/*
 !da1/inputs/raw/imf_ofc_table1.csv
+# Bảng phân tích DA1 dựng lại bằng build_panel.py; không đưa lên trước khi nộp tiền đăng ký
+da1/da1_panel.csv
+da1/da1_covariates.csv

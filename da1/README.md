@@ -24,9 +24,9 @@ Bám đúng bản tiền đăng ký OSF của DA1. **Chỉ chạy phần ước 
 | `ofc_list.csv` | iso3 | Danh sách trung tâm tài chính hải ngoại của IMF |
 | `wdi_supplement.csv` | iso3, year, gdp_usd, gdppc_usd, source | Bổ sung cho nền kinh tế WDI không có (Đài Loan: IMF WEO 4/2026) |
 
-Trạng thái 04/10/2026: đã có đủ `wdi`, `wgi`, `hofstede`, `cepii_dist`, `fta`, `ofc_list` (nguồn và quy tắc: `inputs/sources*.md`; `fta.csv` và `ofc_list.csv` dựng lại bằng `inputs/build_fta.py`, `inputs/build_ofc_list.py`). Còn thiếu `fdi_registered.csv` và `imf_cdis.csv`.
+Trạng thái 05/10/2026: đủ mọi tệp đầu vào. `fdi_registered.csv` dựng từ Niên giám Thống kê 2006–2025 (`inputs/gso/`, xem README ở đó); `imf_cdis.csv` từ IMF DIP (số suy từ đối tác). Nguồn và quy tắc: `inputs/sources*.md`, `inputs/gso/README.md`.
 
-Khi chưa có `fdi_registered.csv`, `build_panel.py` chỉ dựng bảng biến giải thích cho mọi nền kinh tế có số liệu, cột FDI để trống: `python3 build_panel.py --inputs inputs --out da1_covariates.csv` (4.522 quan sát, 238 nền kinh tế; 16 nước của mẫu 2019 đủ mọi biến).
+`python3 build_panel.py --inputs inputs --out da1_panel.csv` → 2.014 quan sát, 106 nền kinh tế (81 trong mẫu chính, sau khi loại OFC). Thiếu điểm Hofstede làm mẫu đủ biến của mẫu chính còn 45 nền kinh tế. Bảng phân tích không đưa lên repo trước khi nộp tiền đăng ký.
 
 ## Chạy
 
