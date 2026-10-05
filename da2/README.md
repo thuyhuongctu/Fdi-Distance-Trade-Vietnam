@@ -20,3 +20,5 @@
 Kiểm tra cấu trúc trên dữ liệu thật (chỉ đếm ô): XK 25 nhóm × 54 quý, 50 ô thiếu (2023Q1–Q2); NK 26 nhóm × 54 quý, 26 ô thiếu (2023Q4).
 
 **Quyết định 02/10/2026 (phương án b):** bước 1 của công cụ shift-share có F ≈ 1 (53 quý; không dùng số liệu Hải quan) → phân tích xác nhận là LP OLS có biến kiểm soát, diễn giải là quan hệ động có điều kiện; LP-IV chuyển sang khám phá. Đã khai báo ở Phần 4 tiền đăng ký.
+
+**Cập nhật 05/10/2026:** `inputs/raw/fdi_vn_quarterly.csv` đồng bộ với VietLens. Vốn đăng ký cấp mới quý I/2023 (3,45 tỷ USD) được bổ sung từ tệp lời văn .docx của báo cáo quý trên trang Tổng cục Thống kê; 7 quý 2022–2024 chuyển từ nguồn báo chí sang báo cáo gốc (cùng số). `fdi_reg` nay đủ 58 quý (trước: thiếu 2023Q1–Q2). Chưa chạy phân tích.
