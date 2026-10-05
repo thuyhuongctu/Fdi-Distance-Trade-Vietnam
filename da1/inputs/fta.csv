@@ -1,67 +1,75 @@
-iso3,fta_name,rta_id,in_force_date,in_force_year,type
-ARM,EAEU - Viet Nam,973,2016-10-05,2016,FTA & EIA
-AUS,ASEAN - Australia - New Zealand,437,2010-01-01,2010,FTA & EIA
-AUS,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,FTA & EIA
-AUT,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-BEL,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-BGR,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-BLR,EAEU - Viet Nam,973,2016-10-05,2016,FTA & EIA
-BRN,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
-BRN,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2023-07-12,2023,FTA & EIA
-CAN,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,FTA & EIA
-CHL,Chile - Viet Nam,685,2014-01-01,2014,FTA
-CHL,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2023-02-21,2023,FTA & EIA
-CHN,ASEAN - China,42,2005-01-01,2005,FTA & EIA
-CYP,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-CZE,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-DEU,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-DNK,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-ESP,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-EST,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-FIN,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-FRA,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-GBR,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-GBR,United Kingdom - Viet Nam,1130,2021-01-01,2021,FTA & EIA
-GBR,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2024-12-15,2024,FTA & EIA
-GBR,CPTPP - Accession of the United Kingdom,1218,2024-12-15,2024,FTA & EIA
-GRC,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-HKG,"ASEAN - Hong Kong, China",994,2019-06-11,2019,FTA & EIA
-HRV,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-HUN,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-IDN,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
-IND,ASEAN - India,438,2010-06-01,2010,FTA & EIA
-IRL,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-ISR,Israel - Viet Nam,997,2024-11-17,2024,FTA & EIA
-ITA,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-JPN,ASEAN - Japan,176,2008-12-01,2008,FTA & EIA
-JPN,Japan - Viet Nam,170,2009-10-01,2009,FTA & EIA
-JPN,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,FTA & EIA
-KAZ,EAEU - Viet Nam,973,2016-10-05,2016,FTA & EIA
-KGZ,EAEU - Viet Nam,973,2016-10-05,2016,FTA & EIA
-KHM,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
-KOR,"ASEAN - Korea, Republic of",169,2010-01-01,2010,FTA & EIA
-KOR,"Korea, Republic of - Viet Nam",709,2015-12-20,2015,FTA & EIA
-LAO,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
-LTU,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-LUX,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-LVA,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-MEX,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,FTA & EIA
-MLT,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-MMR,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
-MYS,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
-MYS,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2022-11-29,2022,FTA & EIA
-NLD,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-NZL,ASEAN - Australia - New Zealand,437,2010-01-01,2010,FTA & EIA
-NZL,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,FTA & EIA
-PER,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2021-09-19,2021,FTA & EIA
-PHL,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
-POL,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-PRT,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-ROU,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-RUS,EAEU - Viet Nam,973,2016-10-05,2016,FTA & EIA
-SGP,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
-SGP,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,FTA & EIA
-SVK,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-SVN,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-SWE,EU - Viet Nam,872,2020-08-01,2020,FTA & EIA
-THA,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,FTA
+iso3,fta_name,rta_id,in_force_date,in_force_year,note
+ARM,EAEU - Viet Nam,973,2016-10-05,2016,
+AUS,ASEAN - Australia - New Zealand,437,2010-01-01,2010,
+AUS,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+AUT,EU - Viet Nam,872,2020-08-01,2020,
+BEL,EU - Viet Nam,872,2020-08-01,2020,
+BGR,EU - Viet Nam,872,2020-08-01,2020,
+BLR,EAEU - Viet Nam,973,2016-10-05,2016,
+BRN,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+BRN,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"
+BRN,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2023-07-12,2023,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+CAN,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+CHL,Chile - Viet Nam,685,2014-01-01,2014,
+CHL,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2023-02-21,2023,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+CHN,ASEAN - China,42,2005-01-01,2005,
+CYP,EU - Viet Nam,872,2020-08-01,2020,
+CZE,EU - Viet Nam,872,2020-08-01,2020,
+DEU,EU - Viet Nam,872,2020-08-01,2020,
+DNK,EU - Viet Nam,872,2020-08-01,2020,
+ESP,EU - Viet Nam,872,2020-08-01,2020,
+EST,EU - Viet Nam,872,2020-08-01,2020,
+FIN,EU - Viet Nam,872,2020-08-01,2020,
+FRA,EU - Viet Nam,872,2020-08-01,2020,
+GBR,EU - Viet Nam,872,2020-08-01,2020,"UK covered by EVFTA during the Brexit transition period, until 31 Dec 2020 (WTO Remarks)."
+GBR,United Kingdom - Viet Nam,1130,2021-01-01,2021,
+GBR,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2024-12-15,2024,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+GRC,EU - Viet Nam,872,2020-08-01,2020,
+HKG,"ASEAN - Hong Kong, China",994,2019-06-11,2019,
+HRV,EU - Viet Nam,872,2020-08-01,2020,
+HUN,EU - Viet Nam,872,2020-08-01,2020,
+IDN,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+IDN,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"
+IND,ASEAN - India,438,2010-01-01,2010,
+IRL,EU - Viet Nam,872,2020-08-01,2020,
+ISR,Israel - Viet Nam,997,2024-11-17,2024,
+ITA,EU - Viet Nam,872,2020-08-01,2020,
+JPN,ASEAN - Japan,176,2008-12-01,2008,
+JPN,Japan - Viet Nam,170,2009-10-01,2009,
+JPN,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+KAZ,EAEU - Viet Nam,973,2016-10-05,2016,
+KGZ,EAEU - Viet Nam,973,2016-10-05,2016,
+KHM,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+KHM,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"
+KOR,"ASEAN - Korea, Republic of",169,2010-01-01,2010,
+KOR,"Korea, Republic of - Viet Nam",709,2015-12-20,2015,
+LAO,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+LAO,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"
+LTU,EU - Viet Nam,872,2020-08-01,2020,
+LUX,EU - Viet Nam,872,2020-08-01,2020,
+LVA,EU - Viet Nam,872,2020-08-01,2020,
+MEX,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+MLT,EU - Viet Nam,872,2020-08-01,2020,
+MMR,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+MMR,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"
+MYS,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+MYS,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"
+MYS,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2022-11-29,2022,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+NLD,EU - Viet Nam,872,2020-08-01,2020,
+NZL,ASEAN - Australia - New Zealand,437,2010-01-01,2010,
+NZL,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+PER,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2021-09-19,2021,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+PHL,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+PHL,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"
+POL,EU - Viet Nam,872,2020-08-01,2020,
+PRT,EU - Viet Nam,872,2020-08-01,2020,
+ROU,EU - Viet Nam,872,2020-08-01,2020,
+RUS,EAEU - Viet Nam,973,2016-10-05,2016,
+SGP,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+SGP,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"
+SGP,Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP),640,2019-01-14,2019,Pair date = later of Viet Nam (14 Jan 2019) and partner entry into force (WTO Remarks).
+SVK,EU - Viet Nam,872,2020-08-01,2020,
+SVN,EU - Viet Nam,872,2020-08-01,2020,
+SWE,EU - Viet Nam,872,2020-08-01,2020,
+THA,ASEAN Free Trade Area (AFTA) - Inactive,126,1993-01-01,1993,AFTA (CEPT) - WTO goods entry-into-force date of the original AFTA; Viet Nam joined ASEAN in 1995. Both precede the 2006-2024 panel.
+THA,ASEAN Free Trade Area (AFTA),1170,2010-05-17,2010,"ATIGA, successor to AFTA"

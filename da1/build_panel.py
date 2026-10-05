@@ -4,7 +4,8 @@
 
 Bám đúng Phần 3 (Variables) và quy tắc chọn mẫu của bản tiền đăng ký DA1:
   - Mọi nền kinh tế có FDI đăng ký vào Việt Nam ít nhất một năm; năm không có = 0.
-  - Trung tâm tài chính hải ngoại (danh sách IMF) tách khỏi mẫu chính (cờ `ofc`).
+  - Trung tâm tài chính hải ngoại (IMF 2000, danh sách FSF) tách khỏi mẫu chính (cờ `ofc`), trừ Singapore
+    và Hồng Kông – hai trung tâm có hoạt động kinh tế thật, được giữ lại (cột `main`); R2b loại cả hai.
   - Khoảng cách văn hóa / thể chế = khoảng cách Mahalanobis tới Việt Nam (Berry et al., 2010).
   - Khoảng cách kinh tế = |ln GDP/người_j − ln GDP/người_VN|.
 
@@ -12,7 +13,6 @@ Tệp đầu vào (CSV, UTF-8) đặt trong thư mục `inputs/` – xem README.
 Chạy: python build_panel.py --inputs inputs --out da1_panel.csv
 """
 import argparse
-import os
 import numpy as np
 import pandas as pd
 
@@ -21,6 +21,8 @@ WGI_DIMS = ['va', 'pv', 'ge', 'rq', 'rl', 'cc']          # 6 khía cạnh WGI
 HOF_DIMS = ['pdi', 'idv', 'mas', 'uai', 'lto', 'ivr']    # 6 khía cạnh Hofstede
 YEARS = range(2006, 2025)
 # 16 nước trong mẫu của Phan & Đỗ (2019), Bảng 1 – dùng cho kiểm định cầu nối R5
+# Trung tâm tài chính hải ngoại vẫn giữ trong mẫu chính (quyết định thiết kế 3/10/2026)
+OFC_KEEP = {'SGP', 'HKG'}
 SAMPLE_2019 = {'KOR', 'TWN', 'HKG', 'MYS', 'CHN', 'SGP', 'JPN', 'THA', 'DEU', 'FRA', 'NLD', 'RUS', 'GBR', 'USA', 'CAN', 'AUS'}
 
 
@@ -48,20 +50,13 @@ def kogut_singh_to(df, dims, ref_iso):
 
 
 def build(inp):
-    # Khi chưa có tệp FDI: dựng bảng biến giải thích cho mọi nền kinh tế có số liệu, cột FDI để trống
-    covariates_only = not os.path.exists(f'{inp}/fdi_registered.csv')
-    if covariates_only:
-        fdi = pd.DataFrame(columns=['iso3', 'year', 'fdi_usd_m'])
-    else:
-        fdi = pd.read_csv(f'{inp}/fdi_registered.csv')        # iso3, year, fdi_usd_m
-    if os.path.exists(f'{inp}/imf_cdis.csv'):
-        cdis = pd.read_csv(f'{inp}/imf_cdis.csv')             # iso3, year, position_usd_m (tùy chọn)
-    else:
-        cdis = pd.DataFrame(columns=['iso3', 'year', 'position_usd_m'])
+    fdi = pd.read_csv(f'{inp}/fdi_registered.csv')            # iso3, year, fdi_usd_m
+    cdis = pd.read_csv(f'{inp}/imf_cdis.csv')                 # iso3, year, position_usd_m (tùy chọn)
     wdi = pd.read_csv(f'{inp}/wdi.csv')                       # iso3, year, gdp_usd, gdppc_usd
-    if os.path.exists(f'{inp}/wdi_supplement.csv'):           # nền kinh tế WDI không có (Đài Loan: IMF WEO)
-        sup = pd.read_csv(f'{inp}/wdi_supplement.csv')
-        wdi = pd.concat([wdi, sup.loc[~sup['iso3'].isin(wdi['iso3']), ['iso3', 'year', 'gdp_usd', 'gdppc_usd']]])
+    try:                                                      # bổ sung nền kinh tế WDI không có (Đài Loan, IMF WEO)
+        wdi = pd.concat([wdi, pd.read_csv(f'{inp}/wdi_supplement.csv')[wdi.columns]], ignore_index=True)
+    except FileNotFoundError:
+        pass
     wgi = pd.read_csv(f'{inp}/wgi.csv')                       # iso3, year, va, pv, ge, rq, rl, cc
     hof = pd.read_csv(f'{inp}/hofstede.csv')                  # iso3, pdi, idv, mas, uai, lto, ivr
     geo = pd.read_csv(f'{inp}/cepii_dist.csv')                # iso3, distw_km, contig  (khoảng cách tới VNM)
@@ -69,13 +64,10 @@ def build(inp):
     ofc = set(pd.read_csv(f'{inp}/ofc_list.csv')['iso3'])     # danh sách trung tâm tài chính hải ngoại
 
     # Mẫu: mọi nền kinh tế có FDI đăng ký > 0 ít nhất một năm; lấp 0 cho năm trống
-    if covariates_only:
-        ever = sorted((set(wdi['iso3']) | set(wgi['iso3']) | set(geo['iso3'])) - {VN})
-    else:
-        ever = sorted(set(fdi.loc[fdi['fdi_usd_m'] > 0, 'iso3']) - {VN})
+    ever = sorted(set(fdi.loc[fdi['fdi_usd_m'] > 0, 'iso3']) - {VN})
     panel = pd.MultiIndex.from_product([ever, list(YEARS)], names=['iso3', 'year']).to_frame(index=False)
     panel = panel.merge(fdi, on=['iso3', 'year'], how='left')
-    panel['fdi_usd_m'] = np.nan if covariates_only else panel['fdi_usd_m'].fillna(0.0)
+    panel['fdi_usd_m'] = panel['fdi_usd_m'].fillna(0.0)
     panel = panel.merge(cdis, on=['iso3', 'year'], how='left')
 
     # Quy mô và khoảng cách kinh tế
@@ -112,6 +104,7 @@ def build(inp):
     panel['inst_dist_c'] = panel['inst_dist'] - panel['inst_dist'].mean()
     panel['fta_x_inst'] = panel['fta'] * panel['inst_dist_c']
     panel['ofc'] = panel['iso3'].isin(ofc).astype(int)
+    panel['main'] = ((panel['ofc'] == 0) | panel['iso3'].isin(OFC_KEEP)).astype(int)
     panel['in_2019_sample'] = panel['iso3'].isin(SAMPLE_2019).astype(int)
 
     # Nhật ký mẫu: số quan sát bị loại do thiếu số liệu, theo biến (Phần 3, quy tắc 3–4)
@@ -127,7 +120,5 @@ if __name__ == '__main__':
     a = ap.parse_args()
     panel, log = build(a.inputs)
     panel.to_csv(a.out, index=False)
-    if panel['fdi_usd_m'].isna().all():
-        print('Chưa có fdi_registered.csv: chỉ dựng biến giải thích, cột FDI để trống.')
     print(f'{len(panel)} quan sát, {panel.iso3.nunique()} nền kinh tế, {int((panel.fdi_usd_m == 0).sum())} quan sát FDI = 0')
     print('Thiếu số liệu theo biến:', log)
