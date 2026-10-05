@@ -78,6 +78,8 @@ def event_study(p, y, B=9999):
     p_wald = float(chi2.sf(wald, len(pre)))
     p_boot, _ = score_bootstrap(d, y, pre, [n for n in names if n not in pre], ['group', 'period', 'grp_cal'], 'group', B=B)
     res['k'] = ks
+    # Ma trận hiệp phương sai đầy đủ của các hệ số sự kiện (sai số cụm) – đầu vào cho HonestDiD (honestdid.R)
+    res.attrs['vcov'] = np.asarray(V)[np.ix_(range(len(names)), range(len(names)))].tolist()
     lin = linear_pretrend(p, y, B=B)
     return res, dict(pre_wald=wald, df=len(pre), p_wald=p_wald, p_boot=p_boot, **lin)
 
@@ -122,6 +124,7 @@ def run(p, B=9999):
     out['event_study_X'] = es.reset_index(names='term').to_dict('records')
     out['event_study_M'] = event_study(w, 'M', B=B)[0].reset_index(names='term').to_dict('records')
     out['rr_bounds_X'] = rr_bounds(es).to_dict('records')
+    out['event_study_X_vcov'] = dict(terms=list(es.index), k=[int(k) for k in es['k']], ref_k=list(REF_K), V=es.attrs['vcov'])
     # Kiểm định độ vững (Phần 5)
     rb = {}
     terc = w.groupby('group')['EXP'].first()
