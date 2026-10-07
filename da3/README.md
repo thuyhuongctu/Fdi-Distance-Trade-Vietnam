@@ -10,7 +10,8 @@
 | `build_exposure.py` → `exposure.csv` | EXP_g (cố định trước khi xem kết quả) |
 | `ppml.py` | PPML có FE, sai số cụm, wild score bootstrap (Kline & Santos, 2012), Holm |
 | `da3_analysis.py` | Mô hình 1 (DiD), Mô hình 2 (event study), H1–H3, cận Rambachan–Roth xấp xỉ, kiểm định độ vững R1–R6 |
-| `test_da3.py` | 8 kiểm thử trên dữ liệu mô phỏng (đối chiếu pyfixest; kích thước & lực kiểm định) |
+| `test_da3.py` | 9 kiểm thử trên dữ liệu mô phỏng (đối chiếu pyfixest; kích thước & lực kiểm định; ma trận hiệp phương sai xuất cho HonestDiD) |
+| `honestdid.R` | Cận Rambachan–Roth bằng gói `HonestDiD`: đọc `event_study_X` và `event_study_X_vcov` trong `da3_results.json`, ghi `honestdid_results.csv` |
 
 **Chạy:** `python3 fetch_comtrade.py && python3 hs_concordance.py && python3 build_exposure.py && python3 test_da3.py`.
 `da3_analysis.py` từ chối chạy trên dữ liệu thật nếu không có DOI tiền đăng ký DA3. DA3 đăng ký riêng, trước DA2; mỗi lần chạy ghi vào `../disclosure_log.csv` để DA2 khai báo.
@@ -20,4 +21,8 @@
 2. H3 gồm kiểm định chung các hệ số trước sự kiện **và** kiểm định xu hướng tuyến tính 1 bậc tự do: mô phỏng cho thấy kiểm định chung 10 ràng buộc với ~25 cụm gần như không có lực.
 3. Danh sách thuế lấy từ USITC (HTS 2026) thay vì bộ dữ liệu của Fajgelbaum và cộng sự; giới hạn ghi trong Phần 3.
 
-**Giới hạn của `rr_bounds`:** bản xấp xỉ bảo thủ; bài báo nên dùng gói `HonestDiD` (R).
+**Giới hạn của `rr_bounds`:** bản xấp xỉ bảo thủ để kiểm tra nhanh trong Python. Bài báo dùng `honestdid.R` (gói `HonestDiD`): `Rscript honestdid.R da3_results.json` sau khi chạy `da3_analysis.py --registered <DOI>`. Tham số đích là hiệu ứng trung bình các kỳ sau; giới hạn độ lớn tương đối Mbar ∈ {0,5; 1; 1,5; 2} và giới hạn độ trơn M ∈ {0; 0,025; …; 0,1}.
+
+**Lựa chọn mã hóa cần ghi trong tiền đăng ký:** khối kỳ gốc REF_K = −4..−1 được HonestDiD coi là một kỳ gốc gộp (gói giả định một kỳ gốc ngay trước can thiệp). Kỳ trước = k ≤ −5, kỳ sau = k ≥ 0.
+
+**Kiểm tra `honestdid.R` trên dữ liệu mô phỏng** (10 kỳ trước, 6 kỳ sau; R 4.3.3, HonestDiD 0.2.6): (i) không có tác động – khoảng gốc chứa 0; (ii) có tác động 0,3 – khoảng gốc [0,25; 0,37] và khoảng M = 0 (độ trơn) đều loại trừ 0, mất ý nghĩa từ Mbar = 0,5; (iii) có xu hướng trước – ước lượng điều chỉnh theo xu hướng tuyến tính (M = 0) giảm còn [0,14; 0,22]. Khối kỳ gốc gộp 4 tháng làm khoảng độ lớn tương đối rộng; đây là hệ quả của thiết kế, cần nêu trong bài.

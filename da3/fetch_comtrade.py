@@ -26,7 +26,7 @@ for i, url in enumerate(urls):
                 data = json.load(r)['data']
             break
         except urllib.error.HTTPError as e:
-            if e.code != 429 or attempt == 5:
+            if e.code not in (403, 429) or attempt == 5:   # 403 «Quota Exceeded» cũng là giới hạn lượt gọi
                 raise
             time.sleep(2 ** (attempt + 2))
     with open(os.path.join(OUT, f'part_{i:02d}.csv'), 'w', newline='', encoding='utf-8') as f:
