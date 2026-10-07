@@ -92,3 +92,50 @@ def ar_ci(res, y, x, z, w, bw, level=0.95, grid=None):
 def bw_rule(T, h=0):
     """Độ trễ Newey–West: max(⌊4(T/100)^(2/9)⌋, h + 1) vì phần dư LP chồng lấp có dạng MA(h)."""
     return max(int(np.floor(4 * (T / 100) ** (2 / 9))), h + 1)
+
+
+WEBB = np.array([-np.sqrt(1.5), -1, -np.sqrt(.5), np.sqrt(.5), 1, np.sqrt(1.5)])
+
+
+def wcr(res, y, x, w, beta0=0.0, B=9999, seed=20261007, weights=None):
+    """Wild cluster bootstrap-t theo quý, có áp giả thuyết không H0: β_x = beta0 (WCR; Cameron, Gelbach & Miller, 2008),
+    trọng số Webb 6 điểm, thống kê t với sai số cụm theo quý CR1. Dùng hồi quy OLS đã khử FE trong `res` (kết quả của iv()).
+    Hợp lệ vì LP đã kiểm soát trễ: điểm số không tự tương quan (Montiel Olea & Plagborg-Møller, 2021) – xem mc_inference.py."""
+    D, d = res['_D'], res['_d']
+    tix = pd.Index(sorted(d[res['_time']].unique())).get_indexer(d[res['_time']])
+    gq = pd.factorize(d['gq'])[0] if 'gq' in d else pd.factorize(d['group_h'])[0]
+    Y = D[y].to_numpy(); X = D[[x] + w].to_numpy(); T = tix.max() + 1; n, k = X.shape
+    A = np.linalg.inv(X.T @ X); cnt = np.bincount(gq)
+
+    def tstat(yy):
+        b = A @ X.T @ yy; e = yy - X @ b
+        h = np.zeros((T, k)); np.add.at(h, tix, X * e[:, None])
+        return (b[0] - beta0) / np.sqrt((A @ (h.T @ h) @ A)[0, 0] * T / (T - 1) * (n - 1) / (n - k))
+    t0 = tstat(Y)
+    Xr = X[:, 1:]; yr = Y - beta0 * X[:, 0]
+    g = np.linalg.lstsq(Xr, yr, rcond=None)[0]
+    fit = Xr @ g + beta0 * X[:, 0]; er = yr - Xr @ g
+    V = weights if weights is not None else np.random.default_rng(seed).choice(WEBB, (B, T))
+    ts = np.array([tstat((lambda v: v - (np.bincount(gq, v) / cnt)[gq])(fit + er * V[r][tix])) for r in range(len(V))])
+    return float((np.abs(ts) >= abs(t0)).mean()), float(t0)
+
+
+def wcr_ci(res, y, x, w, level=0.95, B=1999, seed=20261007, tol=1e-3):
+    """Khoảng tin cậy WCR bằng nghịch đảo kiểm định (chia đôi mỗi phía, cùng bộ trọng số cho mọi β0)."""
+    T = res['T']; V = np.random.default_rng(seed).choice(WEBB, (B, T))
+    p = lambda b0: wcr(res, y, x, w, beta0=b0, weights=V)[0]
+    b, s = res['beta_ols'], res['se_ols']
+    out = []
+    for sgn in (-1, 1):
+        inside, outside = b, b + sgn * s
+        while p(outside) > 1 - level:                          # mở rộng tới khi bị bác bỏ
+            inside, outside = outside, b + 2 * (outside - b)
+            if abs(outside - b) > 1e3 * s:
+                outside = np.nan; break
+        if np.isnan(outside):
+            out.append(np.nan); continue
+        while abs(outside - inside) > tol * s:
+            mid = (inside + outside) / 2
+            inside, outside = (mid, outside) if p(mid) > 1 - level else (inside, mid)
+        out.append((inside + outside) / 2)
+    return dict(lo=out[0], hi=out[1])

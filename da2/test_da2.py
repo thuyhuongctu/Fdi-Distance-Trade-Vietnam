@@ -40,23 +40,24 @@ def panel(seed=0, d='export', **kw):
 
 
 def test_iv_recovers_irf_and_ols_is_biased():
-    irf, cum = lp_irf(panel())
+    irf, cum = lp_irf(panel(), B=399, B_ci=199)
     z = np.abs(irf.beta.values - TRUE_IRF) / irf.se.values
     assert z.max() < 3.5, (irf.beta.values.round(3), irf.se.values.round(3))
     assert abs(cum['iv']['beta'] - TRUE_CUM) / cum['iv']['se'] < cum['cv'], cum['iv']
     assert cum['beta_ols'] > TRUE_CUM, cum['beta_ols']            # nhiễu c_t gây chệch OLS lên trên – lý do diễn giải là quan hệ, không phải nhân quả
-    assert cum['iv']['F_eff'] > 10 and 0 <= cum['p_ols'] <= 1
+    assert cum['iv']['F_eff'] > 10 and 0 <= cum['p_ols'] <= 1 and 0 <= cum['p_wcr'] <= 1
+    assert cum['ci95_wcr']['lo'] < cum['beta_ols'] < cum['ci95_wcr']['hi']
 
 
 def test_weak_instrument_flagged():
-    assert lp_irf(panel(seed=3, pi=0.02))[1]['iv']['F_eff'] < 10
+    assert lp_irf(panel(seed=3, pi=0.02), wild=False)[1]['iv']['F_eff'] < 10
 
 
 def test_fixed_b_coverage():
     """Độ phủ của khoảng β ± cv_fixed-b·se cho đáp ứng tích lũy (danh nghĩa 95%)."""
     cover = 0; N = 40
     for s in range(N):
-        _, c = lp_irf(panel(seed=100 + s))
+        _, c = lp_irf(panel(seed=100 + s), wild=False)
         cover += abs(c['iv']['beta'] - TRUE_CUM) / c['iv']['se'] < c['cv']
     print(f'    độ phủ fixed-b: {cover}/{N}')
     assert cover >= 0.85 * N, cover
@@ -65,7 +66,7 @@ def test_fixed_b_coverage():
 def test_ar_contains_truth_usually():
     hit = 0
     for s in range(20):
-        _, c = lp_irf(panel(seed=300 + s))
+        _, c = lp_irf(panel(seed=300 + s), wild=False)
         a = c['iv']['ar95']; hit += a['lo'] is not None and a['lo'] <= TRUE_CUM <= a['hi']
     assert hit >= 17, hit
 
@@ -80,7 +81,7 @@ def test_ratio_trend():
 def test_ols_coverage_without_confounding():
     cover = 0; N = 30
     for s in range(N):
-        _, c = lp_irf(panel(seed=500 + s, conf=0.0))
+        _, c = lp_irf(panel(seed=500 + s, conf=0.0), wild=False)
         cover += abs(c['beta_ols'] - TRUE_CUM) / c['se_ols'] < c['cv']
     print(f'    độ phủ OLS fixed-b (không nhiễu): {cover}/{N}')
     assert cover >= 0.85 * N, cover
@@ -90,10 +91,36 @@ def test_confirmatory_runs_end_to_end():
     from da2_analysis import confirmatory, robustness
     q, fdi, inst, ctrl = simulate(seed=9)
     fdi['fdi_disb'] = fdi['fdi_disb_sa']
-    out, px, pm = confirmatory(q, fdi, inst, ctrl)
+    out, px, pm = confirmatory(q, fdi, inst, ctrl, B=199, B_ci=99)
     assert {'H1', 'H2', 'H3'} <= set(out) and isinstance(out['H1']['supported'], bool)
-    rb = robustness(q, fdi, inst, ctrl, px, pm)
+    rb = robustness(q, fdi, inst, ctrl, px, pm, B=99, B_ci=49)
     assert {'R2_excl_covid', 'R5_leads', 'R6_not_seasonally_adjusted'} <= set(rb)
+
+
+def test_wcr_size_without_confounding():
+    """Tỷ lệ bác bỏ H0: β = giá trị thật ở mức 5% (mc_inference.py, 1.000 lần lặp: 7,5–8,2%)."""
+    from lp import wcr
+    import da2_analysis as A
+    rej = 0; N = 60
+    for s in range(N):
+        p = panel(seed=700 + s, conf=0.0)
+        w = ['dY_l1', 'dY_l2', 'dlnFDI_l1', 'dlnFDI_l2'] + A.CTRL
+        from lp import iv, bw_rule
+        c = iv(p, 'Y_cum', 'dlnFDI', 'Z', w, bw_rule(p.quarter.nunique(), H - 1))
+        rej += wcr(c, 'Y_cum', 'dlnFDI', w, beta0=TRUE_CUM, B=199, seed=s)[0] < 0.05
+    print(f'    tỷ lệ bác bỏ WCR: {rej}/{N}')
+    assert rej <= 0.15 * N, rej
+
+
+def test_wcr_ci_matches_test():
+    from lp import wcr, wcr_ci, iv, bw_rule
+    import da2_analysis as A
+    p = panel(seed=11, conf=0.0); w = ['dY_l1', 'dY_l2', 'dlnFDI_l1', 'dlnFDI_l2'] + A.CTRL
+    c = iv(p, 'Y_cum', 'dlnFDI', 'Z', w, bw_rule(p.quarter.nunique(), H - 1))
+    ci = wcr_ci(c, 'Y_cum', 'dlnFDI', w, B=199, seed=3)
+    V = np.random.default_rng(3).choice(__import__('lp').WEBB, (199, c['T']))
+    assert wcr(c, 'Y_cum', 'dlnFDI', w, beta0=(ci['lo'] + ci['hi']) / 2, weights=V)[0] > 0.05
+    assert wcr(c, 'Y_cum', 'dlnFDI', w, beta0=ci['hi'] + 0.5 * c['se_ols'], weights=V)[0] <= 0.05
 
 
 def test_fixed_b_pvalue_matches_cv():

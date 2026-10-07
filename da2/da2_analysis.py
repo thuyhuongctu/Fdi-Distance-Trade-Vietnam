@@ -1,6 +1,7 @@
 """DA2 – Phân tích xác nhận theo Phần 5 bản tiền đăng ký DA2 (thiết kế sửa 10/2026):
 FDI giải ngân toàn quốc → thương mại khu vực FDI theo nhóm hàng × quý. Xác nhận: local projections OLS có
-biến kiểm soát (quan hệ động có điều kiện, không diễn giải nhân quả). Khám phá: LP-IV với công cụ shift-share
+biến kiểm soát (quan hệ động có điều kiện, không diễn giải nhân quả); suy diễn bằng wild cluster bootstrap-t theo quý
+có áp H0 (WCR, Webb, B = 9.999) – chọn qua mc_inference.py; DK fixed-b báo cáo kèm. Khám phá: LP-IV với công cụ shift-share
 (bước 1 yếu, F ≈ 1 – xem Phần 4). H3: xu hướng tỷ lệ NK/XK.
 
 © 2026 PGS.TS. Phan Anh Tú & NCS. Đỗ Thùy Hương.
@@ -20,7 +21,7 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 from scipy.stats import t as tdist, norm
-from lp import iv, ar_ci, bw_rule
+from lp import iv, ar_ci, bw_rule, wcr, wcr_ci
 
 H = 8
 H3_SECTORS = ['26', '13-14']
@@ -58,7 +59,7 @@ def group_panel(q, fdi, inst, ctrl, treat='fdi_disb_sa', z='Z'):
     return p
 
 
-def lp_irf(p):
+def lp_irf(p, wild=True, B=9999, B_ci=1999):
     w = ['dY_l1', 'dY_l2', 'dlnFDI_l1', 'dlnFDI_l2'] + CTRL
     T = p.quarter.nunique()
     rows = []
@@ -71,8 +72,11 @@ def lp_irf(p):
     # p-value fixed-b: tìm mức α mà giá trị tới hạn bằng |t| (nghịch đảo số của bảng xấp xỉ, dựa trên t ~ chuẩn ở b → 0)
     p_fb = fixed_b_pvalue(abs(tstat), (c['bw'] + 1) / c['T'])
     t_ols = c['beta_ols'] / c['se_ols']
+    p_wcr, t_cr1 = wcr(c, 'Y_cum', 'dlnFDI', w, B=B) if wild else (np.nan, np.nan)
     cum = dict(beta_ols=c['beta_ols'], se_ols=c['se_ols'], t_ols=t_ols, cv=c['cv'],
-               p_ols=fixed_b_pvalue(abs(t_ols), (c['bw'] + 1) / c['T']),           # xác nhận
+               p_wcr=p_wcr, t_cr1=t_cr1,                                            # xác nhận (WCR theo quý)
+               ci95_wcr=wcr_ci(c, 'Y_cum', 'dlnFDI', w, B=B_ci) if wild else None,
+               p_ols=fixed_b_pvalue(abs(t_ols), (c['bw'] + 1) / c['T']),           # DK fixed-b, báo cáo kèm
                iv=dict(beta=c['beta'], se=c['se'], t=tstat, p=p_fb, F_eff=c['F_eff'], ar95=ar),  # khám phá
                n=c['n'], T=c['T'], bw=c['bw'])
     return pd.DataFrame(rows), cum
@@ -110,13 +114,13 @@ def holm(pv):
     return out
 
 
-def confirmatory(q, fdi, inst, ctrl):
+def confirmatory(q, fdi, inst, ctrl, B=9999, B_ci=1999):
     px = group_panel(q[q.direction == 'export'], fdi, inst, ctrl)
     pm = group_panel(q[q.direction == 'import'], fdi, inst, ctrl)
-    irfX, cX = lp_irf(px); irfM, cM = lp_irf(pm)
+    irfX, cX = lp_irf(px, B=B, B_ci=B_ci); irfM, cM = lp_irf(pm, B=B, B_ci=B_ci)
     h3 = {s: ratio_trend(q, s) for s in H3_SECTORS}
     p_h3 = max(v['p'] for v in h3.values())
-    adj = holm([cX['p_ols'], cM['p_ols'], p_h3])
+    adj = holm([cX['p_wcr'], cM['p_wcr'], p_h3])
     out = dict(H1=dict(**cX, p_holm=adj[0], supported=bool(cX['beta_ols'] > 0 and adj[0] < 0.05)),
                H2=dict(**cM, p_holm=adj[1], supported=bool(cM['beta_ols'] > 0 and adj[1] < 0.05)),
                H3=dict(by_sector=h3, p_max=p_h3, p_holm=adj[2],
@@ -132,13 +136,14 @@ def with_leads(p):
     return p
 
 
-def robustness(q, fdi, inst, ctrl, px, pm):
+def robustness(q, fdi, inst, ctrl, px, pm, B=9999, B_ci=1999):
     import lp
+    irf = lambda p: lp_irf(p, B=B, B_ci=B_ci)
     rb = {}
     covid = lambda p: p[~((p.quarter >= '2020Q2') & (p.quarter <= '2021Q4'))]
-    rb['R2_excl_covid'] = {'X': lp_irf(covid(px))[1], 'M': lp_irf(covid(pm))[1]}
-    rb['R3_excl_electronics'] = {'X': lp_irf(px[~px.group_h.isin(ELEC)])[1], 'M': lp_irf(pm[~pm.group_h.isin(ELEC)])[1]}
-    rb['R4_registered_fdi'] = {k: lp_irf(group_panel(q[q.direction == d], fdi, inst, ctrl, treat='fdi_reg_sa'))[1]
+    rb['R2_excl_covid'] = {'X': irf(covid(px))[1], 'M': irf(covid(pm))[1]}
+    rb['R3_excl_electronics'] = {'X': irf(px[~px.group_h.isin(ELEC)])[1], 'M': irf(pm[~pm.group_h.isin(ELEC)])[1]}
+    rb['R4_registered_fdi'] = {k: irf(group_panel(q[q.direction == d], fdi, inst, ctrl, treat='fdi_reg_sa'))[1]
                                for k, d in (('X', 'export'), ('M', 'import'))}
     # R5: hai giá trị tương lai của ΔlnFDI phải có hệ số 0 (kiểm tra kỳ vọng trước / thứ tự ngược)
     w = ['dY_l1', 'dY_l2', 'dlnFDI_l1', 'dlnFDI_l2', 'dlnFDI_f1', 'dlnFDI_f2'] + CTRL
@@ -148,7 +153,7 @@ def robustness(q, fdi, inst, ctrl, px, pm):
         rb['R5_leads'][k] = dict(beta_ols=r['beta_ols'], se_ols=r['se_ols'],
                                  lead1=r['ols_all']['dlnFDI_f1'], lead2=r['ols_all']['dlnFDI_f2'], cv=r['cv'])
     # R6: FDI chưa hiệu chỉnh mùa vụ (FE nhóm × quý-trong-năm hấp thụ mùa vụ)
-    rb['R6_not_seasonally_adjusted'] = {k: lp_irf(group_panel(q[q.direction == d], fdi, inst, ctrl, treat='fdi_disb'))[1]
+    rb['R6_not_seasonally_adjusted'] = {k: irf(group_panel(q[q.direction == d], fdi, inst, ctrl, treat='fdi_disb'))[1]
                                         for k, d in (('X', 'export'), ('M', 'import'))}
     # R1 (tần suất tháng) chạy bằng da2_monthly.py khi đã có chuỗi FDI tháng
     return rb

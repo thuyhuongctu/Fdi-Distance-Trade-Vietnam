@@ -10,6 +10,11 @@ So sánh độ phủ của khoảng 95% danh nghĩa:
   C  DK–Bartlett, độ trễ S = 1,3·√T, fixed-b (Lazarus, Lewis, Stock & Watson, 2018)
   D  DK–EWC (cosine trọng số đều), ν = ⌊0,4·T^(2/3)⌋ bậc tự do, giá trị tới hạn t_ν (Lazarus et al., 2018)
   E  Bootstrap khối dịch chuyển theo quý (cả lát cắt), percentile-t với sai số DK–Bartlett
+  F  Cụm theo quý, CR1 (hệ số T/(T−1)·(n−1)/(n−k)), giá trị tới hạn t_(T−1) – hợp lệ khi LP đã kiểm soát trễ
+     (Montiel Olea & Plagborg-Møller, 2021: phần dư của ΔlnFDI sau khi trừ trễ là nhiễu trắng nên điểm số không tự tương quan)
+  G  Cụm theo quý, CR2 (Bell & McCaffrey, 2002; điều chỉnh đòn bẩy từng cụm), giá trị tới hạn t_(T−1)
+  W  Wild cluster bootstrap-t theo quý, có áp giả thuyết không (WCR; Cameron, Gelbach & Miller, 2008;
+     trọng số Webb 6 điểm), thống kê t dùng sai số CR1; khoảng = các β0 không bị bác bỏ (ở đây: kiểm tra tại β0 = giá trị thật)
 Chạy:  python3 mc_inference.py --reps 1000 --boot-reps 200 --B 199 --out mc_inference.csv
        (song song: thêm --shard i --nshards n cho từng tiến trình, rồi ghép các tệp CSV)
 """
@@ -89,7 +94,30 @@ def se_from(A, S):
     return float(np.sqrt((A @ S @ A)[0, 0]))
 
 
-def one_rep(seed, dgp, boot, B, rng_boot):
+WEBB = np.array([-np.sqrt(1.5), -1, -np.sqrt(.5), np.sqrt(.5), 1, np.sqrt(1.5)])
+
+
+def wcr_pvalue(y, X, tix, gq_codes, beta0, B, rng):
+    """p-value WCR cho H0: β_1 = beta0. y, X đã khử FE; FE được khử lại trên y* ở mỗi lần lặp."""
+    T = tix.max() + 1; n, k = X.shape
+    A = np.linalg.inv(X.T @ X)
+    cnt = np.bincount(gq_codes)
+    demean = lambda v: v - (np.bincount(gq_codes, v) / cnt)[gq_codes]
+
+    def tstat(yy):
+        b = A @ X.T @ yy; e = yy - X @ b
+        h = np.zeros((T, k)); np.add.at(h, tix, X * e[:, None])
+        se = np.sqrt((A @ (h.T @ h) @ A)[0, 0] * T / (T - 1) * (n - 1) / (n - k))
+        return (b[0] - beta0) / se
+    t0 = tstat(y)
+    yr = y - beta0 * X[:, 0]
+    Xr = X[:, 1:]; g = np.linalg.lstsq(Xr, yr, rcond=None)[0]
+    fit = Xr @ g + beta0 * X[:, 0]; er = yr - Xr @ g
+    ts = np.array([tstat(demean(fit + er * rng.choice(WEBB, T)[tix])) for _ in range(B)])
+    return float((np.abs(ts) >= abs(t0)).mean())
+
+
+def one_rep(seed, dgp, boot, B, rng_boot, wild_B=0):
     q, fdi, inst, ctrl = simulate(seed=seed, **dgp)
     p = group_panel(q, fdi, inst, ctrl)
     y, X, tix = design(p)
@@ -109,6 +137,24 @@ def one_rep(seed, dgp, boot, B, rng_boot):
     out['D'] = abs(b[0] - truth) / se_d < stats.t.ppf(0.975, nu)
     out.update(hw_A=1.959964 * se_b, hw_B=fixed_b_cv((L + 1) / T) * se_b, hw_C=fixed_b_cv(S_llsw / T) * se_c,
                hw_D=stats.t.ppf(0.975, nu) * se_d, L=L, S_llsw=S_llsw, nu=nu)
+    n, k = X.shape
+    se_f = float(np.sqrt((A @ (h.T @ h) @ A)[0, 0] * T / (T - 1) * (n - 1) / (n - k)))
+    tcv = stats.t.ppf(0.975, T - 1)
+    out['F'] = abs(b[0] - truth) / se_f < tcv
+    e = y - X @ b
+    h2 = np.zeros_like(h)
+    for t in range(T):
+        i = np.flatnonzero(tix == t); Xg = X[i]
+        Hg = Xg @ A @ Xg.T
+        w, V = np.linalg.eigh(np.eye(len(i)) - Hg)
+        Mg = V @ np.diag(1 / np.sqrt(np.clip(w, 1e-10, None))) @ V.T
+        h2[t] = Xg.T @ (Mg @ e[i])
+    se_g = se_from(A, h2.T @ h2)
+    out['G'] = abs(b[0] - truth) / se_g < tcv
+    out.update(hw_F=tcv * se_f, hw_G=tcv * se_g, se_A=se_b, se_F=se_f, se_G=se_g)
+    if wild_B:
+        gq_codes = pd.factorize(p.dropna(subset=['Y_cum', 'dlnFDI'] + W)['gq'])[0]
+        out['W'] = wcr_pvalue(y, X, tix, gq_codes, truth, wild_B, rng_boot) > 0.05
     if boot:
         # khối dịch chuyển theo quý, dài ℓ = H (phần dư LP tích lũy chồng lấp MA(H−1))
         ell = H; nb = int(np.ceil(T / ell)); starts = np.arange(T - ell + 1)
@@ -143,16 +189,19 @@ if __name__ == '__main__':
     ap.add_argument('--T', type=int, default=56)
     ap.add_argument('--out', default='mc_inference.csv')
     ap.add_argument('--shard', type=int, default=0)
+    ap.add_argument('--wild-B', type=int, default=399)
     ap.add_argument('--nshards', type=int, default=1)
     a = ap.parse_args()
     rng = np.random.default_rng(2026 + a.shard)
     res = []
     for name, dgp in DGPS.items():
         for s in range(a.shard, a.reps, a.nshards):
-            r = one_rep(10_000 + s, dict(dgp, T=a.T), s < a.boot_reps, a.B, rng)
+            r = one_rep(10_000 + s, dict(dgp, T=a.T), s < a.boot_reps, a.B, rng, a.wild_B)
             r['dgp'] = name; res.append(r)
     df = pd.DataFrame(res)
     df.to_csv(a.out, index=False)
-    summ = df.groupby('dgp').agg(**{m: (m, 'mean') for m in 'ABCDE'}, **{f'hw_{m}': (f'hw_{m}', 'mean') for m in 'ABCDE'},
-                                 reps=('seed', 'size'), T=('T', 'first'), L=('L', 'first'), S=('S_llsw', 'first'), nu=('nu', 'first'))
+    ms = [m for m in 'ABCDEFGW' if m in df]
+    summ = df.groupby('dgp')[ms + [f'hw_{m}' for m in ms if f'hw_{m}' in df]].mean()
+    summ['sd_beta'] = df.groupby('dgp').apply(lambda g: (g.beta - g.truth).std())
+    summ['reps'] = df.groupby('dgp').size()
     print(summ.round(3).to_string())
