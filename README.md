@@ -7,10 +7,11 @@ Research programme DA0–DA4 · **Do Thuy Huong** (ORCID [0000-0002-7711-2487](h
 | Folder | Component | Status |
 |---|---|---|
 | `da0/` | Customs FDI-sector trade panel, 01/2013–08/2026: parsers, cleaning, harmonisation, concordance | Code public; **purchased data excluded** |
-| `da1/` | Distance and FDI (structural gravity, PPML) | Code drafted; preregistration drafted |
+| `da1/` | Distance and FDI (structural gravity, PPML) | Code + all covariate inputs; preregistration ready (FDI outcome collected only after registration) |
 | `da2/` | Aggregate FDI inflows and FDI-sector trade (local projections) | Code + public inputs; preregistration drafted |
 | `da3/` | US–China tariffs and FDI-sector trade (event study, PPML) | Code + exposure measure; preregistration ready |
 | `osf-wiki/` | Text of the OSF project and component wikis | — |
+| `tools/` | `osf_upload.ps1`: uploads the code package and its SHA-256 file to OSF Storage (Windows PowerShell 5.1+/PowerShell 7) | — |
 
 ## Rules
 
