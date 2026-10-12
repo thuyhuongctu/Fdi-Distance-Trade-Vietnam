@@ -7,6 +7,8 @@
 | `parse_customs.py` | Đọc Biểu 017.T/018.T (PDF hoặc văn bản) → bảng dọc có 4 trường xuất xứ; ghi nhật ký kiểm tra |
 | `panel.csv` | Kết quả chạy thử trên biểu tháng 8/2026 (80 dòng) |
 | `cleaning_log.csv` | Nhật ký kiểm tra: tổng nhóm so với dòng tổng, STT trùng, dòng trống, tiểu mục vượt nhóm cha |
+| `CODEBOOK.md` | Codebook của `monthly_clean.csv` và `monthly_harmonised.csv`: biến, đơn vị, 4 trường xuất xứ, quy tắc hài hòa, vấn đề đã biết |
+| `test_da0.py` | 13 kiểm thử trên biểu mô phỏng (không dùng dữ liệu mua): đọc biểu, STT trùng, dòng ghi nhớ 2026, loại tệp tải nhầm, suy tháng thiếu, quy tắc R2/R3, tổng nhóm = dòng tổng |
 | `concordance_draft.csv` | Bản nháp đối chiếu nhóm hàng → ngành VSIC, vai trò trong DA2 (đầu ra/đầu vào/loại trừ), chương HS gợi ý, độ tin cậy |
 
 Chạy: `python3 parse_customs.py <các tệp PDF> --out panel.csv --log cleaning_log.csv` (cần `pdftotext`).
@@ -31,3 +33,6 @@ Quy trình: `parse_flat.py raw/` → `build_monthly.py` → `harmonise.py`.
 Gãy danh mục: (i) 01/2024 Hải quan tách thêm 6 nhóm XK, 5 nhóm NK → cộng vào «Hàng hóa khác» trong chuỗi hài hòa;
 (ii) từ 03/2026 mẫu biểu mới có dòng ghi nhớ không đánh số → xem `harmonise_map.csv`.
 Dữ liệu thô và bảng đầu ra là dữ liệu mua – **không** đưa lên repo công khai.
+
+
+Kiểm thử: `python3 test_da0.py` (cần `pandas`). Từ 10/2026, mỗi dòng của `monthly_clean.csv` có đủ 4 trường xuất xứ (`period`, `source`, `method`, `limitation`); tháng suy từ cộng dồn được ghi rõ trong `limitation`.

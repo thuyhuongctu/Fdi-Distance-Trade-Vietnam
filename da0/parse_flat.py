@@ -140,7 +140,9 @@ def main():
         for x in r:
             x.update(source_title=title, drive_file_id=fid, drive_modified=mod, text_sha256_16=h,
                      source='Cục Hải quan, Biểu 017.T/018.T – khu vực doanh nghiệp FDI',
-                     method='Số liệu tờ khai, tổng hợp theo nhóm hàng; văn bản trích từ PDF qua Google Drive')
+                     method='Số liệu tờ khai, tổng hợp theo nhóm hàng; văn bản trích từ PDF qua Google Drive',
+                     limitation=f'Số {"sơ bộ" if x["status"] == "preliminary" else "chính thức"}; khu vực FDI; '
+                                'nhóm hàng theo danh mục của kỳ báo cáo')
         for x in l:
             x['drive_file_id'] = fid
         rows += r; logs += l

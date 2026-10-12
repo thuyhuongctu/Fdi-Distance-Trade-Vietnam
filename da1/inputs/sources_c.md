@@ -53,3 +53,14 @@ All files are produced by `../fetch_inputs.py`. The script downloads directly fr
 - Economies with all of ln_dist, cult_dist, inst_dist, econ_dist and ln_gdp for all of 2006–2024: 61. Of these, 58 are in the main sample; CHE, LUX and MLT drop out as OFCs.
 - Hofstede is the binding constraint. Without the cultural-distance requirement, 186 economies are complete.
 - All 16 economies of the Phan & Do (2019) sample are complete, including Taiwan.
+
+## imf_cdis.csv (iso3, year, position_usd_m, confidential) — added 2026-10-05
+- IMF Direct Investment Positions by Counterpart Economy (DIP, formerly CDIS), dataflow `IMF.STA:DIP(12.0.1)`, release 2025-12-10:
+  `https://api.imf.org/external/sdmx/2.1/data/IMF.STA,DIP,12.0.1/VNM.SCC.INWD_D_NETLA_FALL_ALL..A?startPeriod=2009`.
+- Viet Nam does not report to the survey: the same query with `DV_TYPE = O` (reported official data) returns no series. All values are **derived from counterpart economies' outward positions** (`DV_TYPE = SCC`), as the preregistration allows.
+- Indicator: inward direct investment, net (liabilities less assets), all instruments, all entities; end-year positions 2009–2024. `OBS_VALUE` is in US dollars (the `SCALE="6"` attribute is a display hint); converted to USD million.
+- World and regional aggregates dropped. 954 rows, 79 counterparts. 153 cells are confidential (`STATUS = C`, no value; `confidential = 1`). 19 values are negative (net disinvestment); PPML needs y ≥ 0, so robustness check R1 must state how negatives are treated before it is run.
+- Singapore and Taiwan do not publish bilateral outward positions, so they have no CDIS rows.
+
+## fdi_registered.csv — added 2026-10-05
+- GSO Statistical Yearbooks 2006–2025, table of FDI projects licensed in the year by main counterpart. Method, checks and source issues: `gso/README.md`.

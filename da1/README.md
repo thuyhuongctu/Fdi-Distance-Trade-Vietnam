@@ -33,3 +33,9 @@ stata -b do da1_confirmatory.do
 ```
 
 Ghi lại phiên bản và ngày tải của từng tệp đầu vào vào codebook (yêu cầu của tiền đăng ký, Phần 2).
+
+## Cập nhật 05/10/2026
+
+Đã đủ hai tệp còn thiếu: `inputs/fdi_registered.csv` (Niên giám Thống kê 2006–2025; quy trình, kiểm tra và lỗi nguồn ở `inputs/gso/README.md`) và `inputs/imf_cdis.csv` (IMF DIP, số suy từ đối tác; xem `inputs/sources_c.md`). `build_panel.py` chạy được trên dữ liệu thật; bảng `da1_panel.csv` không đưa lên repo trước khi nộp tiền đăng ký.
+
+Trước khi nộp tiền đăng ký, xem `PREREG_DISCLOSURE.md`: các bước đã làm trên dữ liệu (kèm commit), những gì đã thấy (chỉ thống kê một biến và độ phủ), và 6 quyết định cần thầy duyệt.
