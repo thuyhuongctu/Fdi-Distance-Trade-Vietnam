@@ -26,4 +26,4 @@ Research programme DA0–DA4 · **Do Thuy Huong** (ORCID [0000-0002-7711-2487](h
 - Code: MIT (`LICENSE`).
 - Documentation, concordances and derived variables: CC BY 4.0, citation required (`docs/LICENSE-docs.md`).
 - Third-party public data remain under their providers' terms. Purchased data: provider's licence; not redistributed.
-- How to cite: `CITATION.cff`. Archived on Zenodo: all versions [10.5281/zenodo.23115783](https://doi.org/10.5281/zenodo.23115783); version 1.0 [10.5281/zenodo.23115784](https://doi.org/10.5281/zenodo.23115784). Cite the version DOI for the exact code used in an analysis.
+- How to cite: `CITATION.cff`. Archived on Zenodo: all versions [10.5281/zenodo.23115783](https://doi.org/10.5281/zenodo.23115783); version 1.1 [10.5281/zenodo.23322198](https://doi.org/10.5281/zenodo.23322198); version 1.0 [10.5281/zenodo.23115784](https://doi.org/10.5281/zenodo.23115784). Cite the version DOI for the exact code used in an analysis.

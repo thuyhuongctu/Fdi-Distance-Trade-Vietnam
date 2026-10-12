@@ -7,9 +7,10 @@ Việc tải tệp lên Files có thể tự động hóa bằng PowerShell (bư
 
 ## 1. Đưa gói mã lên OSF Storage
 
-Dùng gói mã v1.0: `Fdi-Distance-Trade-Vietnam-v0.1.0-e300047.zip` (64 tệp) kèm tệp `.sha256`.
-Tên tệp vẫn giữ "v0.1.0" như lúc đóng gói, nhưng đây đúng là commit e300047 mà bản phát hành v1.0 trên GitHub trỏ tới.
-Nếu tải bản *Source code (zip)* của release v1.0 thì nội dung giống hệt: GitHub cũng bỏ thư mục `da3/comtrade/` theo `.gitattributes`.
+Dùng gói mã v1.1 (commit 8f4d797; DOI 10.5281/zenodo.23322198). Gói này có `da3/honestdid.R`, script mà bản DA3 nhắc đến; gói v1.0 (e300047) chưa có.
+Tải *Source code (zip)* của release v1.1 trên GitHub: https://github.com/thuyhuongctu/Fdi-Distance-Trade-Vietnam/releases/tag/v1.1. Tệp tải về tên là `Fdi-Distance-Trade-Vietnam-1.1.zip`. GitHub đã bỏ thư mục `da3/comtrade/` theo `.gitattributes`.
+Tạo tệp kiểm tra trong PowerShell: `(Get-FileHash Fdi-Distance-Trade-Vietnam-1.1.zip -Algorithm SHA256).Hash.ToLower() + "  Fdi-Distance-Trade-Vietnam-1.1.zip" | Out-File -Encoding ascii Fdi-Distance-Trade-Vietnam-1.1.zip.sha256`.
+Gói v1.0 đã có trên OSF thì cứ để nguyên; ghi chú bên cạnh rằng bản đăng ký dùng v1.1.
 
 **1a. Bằng trình duyệt.** Mở https://osf.io/m25qs/files → OSF Storage → Upload, rồi chọn hai tệp.
 
@@ -21,11 +22,11 @@ Nếu tải bản *Source code (zip)* của release v1.0 thì nội dung giống
    ```
 3. Chạy thử trước. Lệnh này kiểm tra SHA-256 và đăng nhập, chưa tải gì:
    ```powershell
-   .\osf_upload.ps1 -Files Fdi-Distance-Trade-Vietnam-v0.1.0-e300047.zip, Fdi-Distance-Trade-Vietnam-v0.1.0-e300047.zip.sha256 -WhatIf
+   .\osf_upload.ps1 -Files Fdi-Distance-Trade-Vietnam-1.1.zip, Fdi-Distance-Trade-Vietnam-1.1.zip.sha256 -WhatIf
    ```
 4. Tải lên thật, có thể đặt vào thư mục con `code`:
    ```powershell
-   .\osf_upload.ps1 -Files Fdi-Distance-Trade-Vietnam-v0.1.0-e300047.zip, Fdi-Distance-Trade-Vietnam-v0.1.0-e300047.zip.sha256 -Folder code
+   .\osf_upload.ps1 -Files Fdi-Distance-Trade-Vietnam-1.1.zip, Fdi-Distance-Trade-Vietnam-1.1.zip.sha256 -Folder code
    ```
    Script hỏi token ở dạng ẩn và không lưu token. Nếu tệp đã có trên OSF, script tải lên thành phiên bản mới; OSF vẫn giữ các phiên bản cũ.
 

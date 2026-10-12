@@ -2,13 +2,16 @@ cff-version: 1.2.0
 message: "If you use this software, data mappings or derived variables, please cite them as below."
 title: "Distance, FDI and the Trade of Foreign-Invested Firms in Vietnam: research code and data mappings (DA0–DA4)"
 type: software
-version: "1.0"
-date-released: "2026-10-03"
+version: "1.1"
+date-released: "2026-10-12"
 doi: 10.5281/zenodo.23115783
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23115783
     description: "Concept DOI: all versions (resolves to the latest)"
+  - type: doi
+    value: 10.5281/zenodo.23322198
+    description: "Version 1.1"
   - type: doi
     value: 10.5281/zenodo.23115784
     description: "Version 1.0"

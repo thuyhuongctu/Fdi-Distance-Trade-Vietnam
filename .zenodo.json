@@ -1,8 +1,6 @@
 {
   "title": "Distance, FDI and the Trade of Foreign-Invested Firms in Vietnam: research code and data mappings (DA0–DA4)",
   "upload_type": "software",
-  "version": "1.0",
-  "publication_date": "2026-10-03",
   "description": "Code, concordances and derived variables for a research programme on cross-national distance, FDI inflows into Vietnam and the trade of foreign-invested firms (2006–2026). Components: DA0 Customs FDI-sector trade panel (code only; the purchased data are not included), DA1 distance and FDI (structural gravity, PPML), DA2 aggregate FDI inflows and FDI-sector trade (local projections), DA3 US–China tariffs and FDI-sector trade (event study). Confirmatory analyses follow OSF preregistrations.",
   "creators": [
     {
