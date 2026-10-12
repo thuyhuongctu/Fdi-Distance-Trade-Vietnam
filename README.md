@@ -1,5 +1,7 @@
 # Distance, FDI and the Trade of Foreign-Invested Firms in Vietnam
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23115783.svg)](https://doi.org/10.5281/zenodo.23115783)
+
 Research programme DA0–DA4 · **Do Thuy Huong** (ORCID [0000-0002-7711-2487](https://orcid.org/0000-0002-7711-2487)) and **Assoc. Prof. Dr. Phan Anh Tu** (ORCID [0000-0003-0667-3137](https://orcid.org/0000-0003-0667-3137)) · School of Economics, Can Tho University.
 
 © 2026 PGS.TS. Phan Anh Tú & NCS. Đỗ Thùy Hương.
@@ -24,4 +26,4 @@ Research programme DA0–DA4 · **Do Thuy Huong** (ORCID [0000-0002-7711-2487](h
 - Code: MIT (`LICENSE`).
 - Documentation, concordances and derived variables: CC BY 4.0, citation required (`docs/LICENSE-docs.md`).
 - Third-party public data remain under their providers' terms. Purchased data: provider's licence; not redistributed.
-- How to cite: `CITATION.cff`. A Zenodo DOI will be minted from the first GitHub release after the repository is made public (`.zenodo.json` holds the archive metadata).
+- How to cite: `CITATION.cff`. Archived on Zenodo: all versions [10.5281/zenodo.23115783](https://doi.org/10.5281/zenodo.23115783); version 1.0 [10.5281/zenodo.23115784](https://doi.org/10.5281/zenodo.23115784). Cite the version DOI for the exact code used in an analysis.

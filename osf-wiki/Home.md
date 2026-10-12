@@ -36,6 +36,8 @@ The programme updates both with longer data, current estimators (PPML, local pro
 
 *Links to each component and its registration DOI will be added here as they are created.*
 
+Research code and data mappings: GitHub [thuyhuongctu/Fdi-Distance-Trade-Vietnam](https://github.com/thuyhuongctu/Fdi-Distance-Trade-Vietnam), archived on Zenodo [10.5281/zenodo.23115783](https://doi.org/10.5281/zenodo.23115783) (all versions; v1.0: [10.5281/zenodo.23115784](https://doi.org/10.5281/zenodo.23115784)).
+
 ## 3. Preregistrations
 
 Each confirmatory study is preregistered with the OSF secondary-data template before the corresponding data are analysed.
