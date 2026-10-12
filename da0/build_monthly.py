@@ -81,6 +81,7 @@ for (d, y), grp in out.groupby(['direction', 'year']):
             n['value_usd_ytd'] = ytd_m; n['value_usd_month'] = ytd_m - prev_ytd
             n['qty_month'] = n['qty_ytd'] = None
             n['imputed_from_ytd'] = 1
+            n['limitation'] = f'{n["limitation"]}; tháng thiếu biểu, suy từ cộng dồn'
             n['source_title'] = f'(suy từ cộng dồn {r["period"]} − {y:04d}-{m-1:02d})'
             add.append(n)
         if add and add[-1]['period'] == f'{y:04d}-{m:02d}' and add[-1]['direction'] == d:
