@@ -79,6 +79,14 @@ def test_holm():
     assert np.allclose(holm([0.03, 0.02]), [0.04, 0.04])
 
 
+def test_event_study_vcov():
+    es, _ = event_study(window(simulate(delta=0.1), *MAIN), 'X', B=99)
+    V = np.asarray(es.attrs['vcov'])
+    assert V.shape == (len(es), len(es))
+    assert np.allclose(np.sqrt(np.diag(V)), es['se'])
+    assert np.allclose(V, V.T)
+
+
 if __name__ == '__main__':
     for name, fn in list(globals().items()):
         if name.startswith('test_'):
