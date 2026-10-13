@@ -25,4 +25,4 @@
 
 **Lựa chọn mã hóa cần ghi trong tiền đăng ký:** khối kỳ gốc REF_K = −4..−1 được HonestDiD coi là một kỳ gốc gộp (gói giả định một kỳ gốc ngay trước can thiệp). Kỳ trước = k ≤ −5, kỳ sau = k ≥ 0.
 
-**Kiểm tra `honestdid.R` trên dữ liệu mô phỏng** (10 kỳ trước, 6 kỳ sau; R 4.3.3, HonestDiD 0.2.6): (i) không có tác động – khoảng gốc chứa 0; (ii) có tác động 0,3 – khoảng gốc [0,25; 0,37] và khoảng M = 0 (độ trơn) đều loại trừ 0, mất ý nghĩa từ Mbar = 0,5; (iii) có xu hướng trước – ước lượng điều chỉnh theo xu hướng tuyến tính (M = 0) giảm còn [0,14; 0,22]. Khối kỳ gốc gộp 4 tháng làm khoảng độ lớn tương đối rộng; đây là hệ quả của thiết kế, cần nêu trong bài.
+**Kiểm tra `honestdid.R` trên dữ liệu mô phỏng** (10 kỳ trước, 6 kỳ sau; R 4.3.3, HonestDiD 0.2.6): (i) không có tác động – khoảng gốc chứa 0; (ii) có tác động 0,3 – khoảng gốc [0,25; 0,37] và khoảng M = 0 (độ trơn) đều loại trừ 0, mất ý nghĩa từ Mbar = 0,5; (iii) có xu hướng trước – ước lượng điều chỉnh theo xu hướng tuyến tính (M = 0) giảm còn [0,14; 0,22]. Khối kỳ gốc gộp 4 quý làm khoảng độ lớn tương đối rộng; đây là hệ quả của thiết kế, cần nêu trong bài.
