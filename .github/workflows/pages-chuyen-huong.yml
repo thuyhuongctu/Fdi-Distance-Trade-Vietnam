@@ -1,0 +1,33 @@
+name: GitHub Pages (chuyển hướng)
+
+# Đăng thư mục pages/: địa chỉ github.io cũ chỉ dẫn tới trang chạy thật trên bizonland.com.
+# Settings → Pages → Source: GitHub Actions.
+on:
+  push:
+    branches: [main]
+    paths: ['pages/**', '.github/workflows/pages-chuyen-huong.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages
+      - id: deployment
+        uses: actions/deploy-pages@v4
