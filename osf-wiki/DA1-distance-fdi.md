@@ -42,4 +42,4 @@ OSF secondary data preregistration: **DOI to be added**. Submitted before the ex
 
 ## Teaching tool
 
-[Gravity Lab](https://thuyhuongctu.github.io/BizOn/lab/gravity-lab.html) reproduces the published 2019 results and runs OLS/PPML in the browser.
+[Gravity Lab](https://bizonland.com/lab/gravity-lab.html) reproduces the published 2019 results and runs OLS/PPML in the browser.

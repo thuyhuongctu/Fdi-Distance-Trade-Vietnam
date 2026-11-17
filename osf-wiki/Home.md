@@ -71,8 +71,8 @@ Deviations from a registered plan are reported in the resulting paper, with reas
 
 These tools apply the programme's data and methods in the classroom. They run in the browser, work offline and send no data off the user's device.
 
-- **Gravity Lab**: re-reads the published gravity results, simulates effects, contrasts log-OLS with PPML, and estimates OLS/PPML on a user's own CSV. https://thuyhuongctu.github.io/BizOn/lab/gravity-lab.html
-- **FDI Factory (Nhà máy FDI)**: a single-player simulation of a foreign-invested plant over eight quarters of trade shocks, sourcing choices and rules of origin. https://thuyhuongctu.github.io/BizOn/lab/nha-may-fdi.html
+- **Gravity Lab**: re-reads the published gravity results, simulates effects, contrasts log-OLS with PPML, and estimates OLS/PPML on a user's own CSV. https://bizonland.com/lab/gravity-lab.html
+- **FDI Factory (Nhà máy FDI)**: a single-player simulation of a foreign-invested plant over eight quarters of trade shocks, sourcing choices and rules of origin. https://bizonland.com/lab/nha-may-fdi.html
 
 Both are part of the BizOn ecosystem (archived on Zenodo: [10.5281/zenodo.21592241](https://doi.org/10.5281/zenodo.21592241)). They are proprietary software and are linked here, not deposited.
 
