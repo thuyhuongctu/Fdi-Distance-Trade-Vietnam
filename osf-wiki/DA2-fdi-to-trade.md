@@ -41,4 +41,4 @@ Raw Customs data are held in [DA0](../DA0) under its access terms.
 
 ## Teaching tool
 
-[FDI Factory (Nhà máy FDI)](https://thuyhuongctu.github.io/BizOn/lab/nha-may-fdi.html) lets students experience the trade-off between imported and local inputs. Its parameters are illustrative until DA2 results are available.
+[FDI Factory (Nhà máy FDI)](https://bizonland.com/lab/nha-may-fdi.html) lets students experience the trade-off between imported and local inputs. Its parameters are illustrative until DA2 results are available.
